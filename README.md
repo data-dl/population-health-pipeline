@@ -11,6 +11,8 @@ de-identified copy that is safe to hand to engineers and trainers.
 Python and SQL on DuckDB, dbt for the measures, R for an independent second implementation of the
 screening rules, and task graphs that run locally or on Apache Airflow.
 
+**Live report (synthetic data):** https://data-dl.github.io/population-health-pipeline/
+
 **Status:** the whole system runs end to end on a generated network of 5,000 synthetic patients across
 five scheduled runs, and is graded against an answer key in CI on Linux and Windows. All 269 planted
 data defects are caught by the rule each was planted for, and nothing else is touched. All nine measures
@@ -19,7 +21,8 @@ The de-identified copy passes a 12-check leak gate before it is released.
 
 ## Reviewing this repo
 
-- **Five minutes:** this page, then [docs/sample_run/](docs/sample_run/). Start with the
+- **Five minutes:** this page and the [live report](https://data-dl.github.io/population-health-pipeline/),
+  then [docs/sample_run/](docs/sample_run/). Start with the
   [third run's summary](docs/sample_run/2026-03-02_01/summary.md): it stops a truncated file, recognises
   a supplier's new layout, and warns that a delivery is due.
 - **Fifteen minutes:** run it with the commands under *How to run*. It needs Python 3.11+; the
