@@ -1,0 +1,161 @@
+feed: roster
+title: Patient roster and attribution
+description: >-
+  Full snapshot of every patient attributed to the network: identity, demographics, contact
+  details, attributed clinic, primary care provider, care manager and problem list. Each delivery
+  replaces the previous one; the warehouse keeps history as slowly changing dimension (type 2).
+steward: Patient registration data steward
+supplier: EHR registration extract
+snapshot: true
+delivery:
+  cadence_days: 7
+  grace_days: 0
+  time_column: null
+date_formats: ['%Y-%m-%d', '%m/%d/%Y']
+date_columns: [birth_date, registration_date]
+natural_key: [patient_id]
+
+sources:
+  ehr_roster:
+    file_pattern: '^roster_(?P<extract>[0-9]{8})(?:_r(?P<redelivery>[0-9]+))?\.csv$'
+    layouts:
+      - version: 1
+        columns:
+          MRN: patient_id
+          FIRST_NAME: first_name
+          LAST_NAME: last_name
+          DOB: birth_date
+          SEX: sex
+          RACE: race
+          ETHNICITY: ethnicity
+          PREF_LANGUAGE: language
+          ADDRESS1: address_line1
+          CITY: city
+          ZIP: zip
+          PHONE: phone
+          EMAIL: email
+          PAYER_TYPE: payer_type
+          SITE_CODE: site_id
+          PCP: pcp_name
+          CARE_MANAGER: care_manager_name
+          PROBLEM_LIST: problem_list
+          REG_DATE: registration_date
+
+columns:
+  - {name: patient_id, type: VARCHAR, classification: direct_identifier, description: "Medical record number, eight digits with leading zeros."}
+  - {name: first_name, type: VARCHAR, classification: direct_identifier, description: Given name.}
+  - {name: last_name, type: VARCHAR, classification: direct_identifier, description: Family name.}
+  - {name: birth_date, type: DATE, classification: direct_identifier, description: "Date of birth (a full date is an identifier; the year alone is a quasi-identifier)."}
+  - {name: sex, type: VARCHAR, classification: quasi_identifier, description: "Administrative sex: F, M, X or U."}
+  - {name: race, type: VARCHAR, classification: quasi_identifier, description: Race as recorded at registration.}
+  - {name: ethnicity, type: VARCHAR, classification: quasi_identifier, description: Ethnicity as recorded at registration.}
+  - {name: race_ethnicity, type: VARCHAR, classification: quasi_identifier, description: "Single reporting category; Hispanic or Latino takes precedence, blanks become Unknown."}
+  - {name: language, type: VARCHAR, classification: quasi_identifier, description: Preferred language code.}
+  - {name: language_group, type: VARCHAR, classification: quasi_identifier, description: "English, Spanish, Other or Unknown."}
+  - {name: address_line1, type: VARCHAR, classification: direct_identifier, description: Street address.}
+  - {name: city, type: VARCHAR, classification: quasi_identifier, description: City.}
+  - {name: zip, type: VARCHAR, classification: direct_identifier, description: "Five-digit ZIP code (the first three digits are a quasi-identifier)."}
+  - {name: phone, type: VARCHAR, classification: direct_identifier, description: "Ten digits, punctuation removed; blank when it cannot be standardised."}
+  - {name: email, type: VARCHAR, classification: direct_identifier, description: E-mail address.}
+  - {name: payer_type, type: VARCHAR, classification: quasi_identifier, description: "commercial, government, marketplace, self_pay or unknown."}
+  - {name: site_id, type: VARCHAR, classification: operational, description: Attributed clinic.}
+  - {name: pcp_name, type: VARCHAR, classification: operational, description: "Primary care provider (workforce, not patient data; replaced in demo copies by policy)."}
+  - {name: care_manager_name, type: VARCHAR, classification: operational, description: Assigned care manager (workforce).}
+  - {name: problem_list, type: VARCHAR, classification: clinical, description: "Semicolon-separated ICD-10-CM codes."}
+  - {name: registration_date, type: DATE, classification: direct_identifier, description: Date the patient registered with the network.}
+
+rules:
+  - id: ROS-001
+    type: volume
+    title: The snapshot has not shrunk
+    dimension: completeness
+    action: block
+    min_ratio: 0.9
+    message: A roster snapshot far smaller than the last one would orphan every clinical feed; the load is stopped.
+  - id: ROS-002
+    type: repair
+    title: Medical record numbers keep their leading zeros
+    dimension: conformity
+    action: repair
+    when: "regexp_full_match(patient_id, '[0-9]{1,7}')"
+    set: {patient_id: "lpad(patient_id, 8, '0')"}
+    message: Numeric record number shorter than eight digits (leading zeros lost in a spreadsheet); zero-padded.
+  - id: ROS-003
+    type: required
+    title: Record number, name and birth date are present
+    dimension: completeness
+    action: quarantine
+    columns: [patient_id, last_name, birth_date_raw]
+  - id: ROS-004
+    type: expression
+    title: Record number is eight digits
+    dimension: conformity
+    action: quarantine
+    fail_when: "patient_id is not null and not regexp_full_match(patient_id, '[0-9]{8}')"
+    detail: patient_id
+  - id: ROS-005
+    type: parse
+    title: Birth date is a real date
+    dimension: validity
+    action: quarantine
+    column: birth_date
+  - id: ROS-006
+    type: expression
+    title: Birth date is plausible
+    dimension: validity
+    action: quarantine
+    fail_when: "birth_date > _extract_date or birth_date < date '1900-01-01'"
+    detail: "cast(birth_date as varchar)"
+  - id: ROS-007
+    type: repair
+    title: Clinic codes are upper case
+    dimension: conformity
+    action: repair
+    when: "site_id is not null and site_id <> upper(site_id)"
+    set: {site_id: "upper(site_id)"}
+    message: Lower-case clinic code standardised.
+  - id: ROS-008
+    type: in_reference
+    title: Attributed clinic exists
+    dimension: integrity
+    action: quarantine
+    column: site_id
+    reference: site_id
+  - id: ROS-009
+    type: mapped
+    title: Sex is a recognised value
+    dimension: validity
+    action: quarantine
+    column: sex
+  - id: ROS-010
+    type: key_conflict
+    title: One row per record number
+    dimension: uniqueness
+    action: quarantine
+    message: The same record number arrived twice with different details; neither version is guessed.
+  - id: ROS-011
+    type: expression
+    title: Phone numbers that cannot be standardised are blanked
+    dimension: conformity
+    action: warn
+    fail_when: "phone_raw is not null and phone is null"
+    detail: phone_raw
+    message: Phone number is not ten digits after removing punctuation; stored blank, original kept in the load.
+  - id: ROS-012
+    type: completeness
+    title: Race and ethnicity are recorded for most patients
+    dimension: completeness
+    action: warn
+    column: race_ethnicity
+    missing_values: [Unknown]
+    min_share: 0.95
+    message: Equity reporting depends on recorded race and ethnicity.
+  - id: ROS-013
+    type: mapped
+    title: Payer type is recognised
+    dimension: validity
+    action: warn
+    column: payer_type
+    message: Unrecognised payer type reported as unknown.
+
+published: [patients, patient_conditions, patient_attribution_history]

@@ -1,0 +1,249 @@
+{
+ "note": "Both documents are synthetic. 'restricted' is what the care-management application reads; 'demo' is the same patient after the demo_site policy.",
+ "restricted": {
+  "_id": "01301982",
+  "appointments": {
+   "frequentNoShow": false,
+   "keptRate180": 1.0,
+   "keptRate30": 1.0,
+   "keptRate90": 1.0,
+   "lastVisit": "2026-02-09",
+   "noShows180": 0
+  },
+  "careGaps": [
+   {
+    "detail": "0 complete social-needs screen",
+    "gap": "social_needs_screen_due"
+   }
+  ],
+  "careTeam": [
+   {
+    "name": "Aisha Ramirez",
+    "role": "primary_care"
+   },
+   {
+    "name": "Ana Flores",
+    "role": "care_manager"
+   }
+  ],
+  "conditions": [
+   {
+    "code": "E11.65",
+    "group": "diabetes_t2"
+   }
+  ],
+  "demographics": {
+   "address": {
+    "city": "Easton",
+    "line1": "70 Sunset Ln",
+    "zip": "70303"
+   },
+   "birthDate": "1959-09-25",
+   "email": "katherine.allen23@example.org",
+   "firstName": "Katherine",
+   "language": "ar",
+   "languageGroup": "Other",
+   "lastName": "Allen",
+   "payerType": "government",
+   "phone": "5555665004",
+   "raceEthnicity": "Black or African American",
+   "registeredOn": "2017-11-03",
+   "sex": "F"
+  },
+  "labs": {
+   "HBA1C": {
+    "history": [
+     {
+      "censor": null,
+      "date": "2025-09-01",
+      "value": 7.4
+     }
+    ],
+    "latest": {
+     "censor": null,
+     "date": "2025-09-01",
+     "value": 7.4
+    },
+    "unit": "%"
+   }
+  },
+  "medications": [
+   {
+    "adherent": true,
+    "daysCovered": 322,
+    "drugClass": "diabetes_oral",
+    "indexDate": "2025-01-09",
+    "pdc": 0.902,
+    "periodDays": 357
+   }
+  ],
+  "meta": {
+   "asOf": "2026-03-03"
+  },
+  "screenings": {
+   "GAD7": {
+    "history": [
+     {
+      "band": "minimal",
+      "complete": true,
+      "date": "2025-01-21",
+      "positive": false,
+      "score": 0
+     }
+    ],
+    "latest": {
+     "band": "minimal",
+     "complete": true,
+     "date": "2025-01-21",
+     "positive": false,
+     "score": 0
+    }
+   },
+   "PHQ9": {
+    "history": [
+     {
+      "band": "minimal",
+      "complete": true,
+      "date": "2025-01-21",
+      "positive": false,
+      "score": 1
+     }
+    ],
+    "latest": {
+     "band": "minimal",
+     "complete": true,
+     "date": "2025-01-21",
+     "positive": false,
+     "score": 1
+    }
+   }
+  },
+  "site": {
+   "id": "S06",
+   "name": "Fir Clinic"
+  }
+ },
+ "demo": {
+  "_id": "D9395744",
+  "appointments": {
+   "frequentNoShow": false,
+   "keptRate180": 1.0,
+   "keptRate30": 1.0,
+   "keptRate90": 1.0,
+   "lastVisit": "2026-02-03",
+   "noShows180": 0
+  },
+  "careGaps": [
+   {
+    "detail": "0 complete social-needs screen",
+    "gap": "social_needs_screen_due"
+   }
+  ],
+  "careTeam": [
+   {
+    "name": "Marlow Birchmore",
+    "role": "primary_care"
+   },
+   {
+    "name": "Arden Jessamine",
+    "role": "care_manager"
+   }
+  ],
+  "conditions": [
+   {
+    "code": "E11.65",
+    "group": "diabetes_t2"
+   }
+  ],
+  "demographics": {
+   "address": {
+    "city": "Easton",
+    "line1": "1791 Foundry Walk",
+    "zip": "70316"
+   },
+   "birthDate": "1959-09-19",
+   "email": "kai.stonebridge71@example.org",
+   "firstName": "Kai",
+   "language": "ar",
+   "languageGroup": "Other",
+   "lastName": "Stonebridge",
+   "payerType": "government",
+   "phone": "5559506210",
+   "raceEthnicity": "Black or African American",
+   "registeredOn": "2017-10-28",
+   "sex": "F"
+  },
+  "labs": {
+   "HBA1C": {
+    "history": [
+     {
+      "censor": null,
+      "date": "2025-08-26",
+      "value": 7.4
+     }
+    ],
+    "latest": {
+     "censor": null,
+     "date": "2025-08-26",
+     "value": 7.4
+    },
+    "unit": "%"
+   }
+  },
+  "medications": [
+   {
+    "adherent": true,
+    "daysCovered": 322,
+    "drugClass": "diabetes_oral",
+    "indexDate": "2025-01-03",
+    "pdc": 0.902,
+    "periodDays": 357
+   }
+  ],
+  "meta": {
+   "asOf": "2026-03-03"
+  },
+  "screenings": {
+   "GAD7": {
+    "history": [
+     {
+      "band": "minimal",
+      "complete": true,
+      "date": "2025-01-15",
+      "positive": false,
+      "score": 0
+     }
+    ],
+    "latest": {
+     "band": "minimal",
+     "complete": true,
+     "date": "2025-01-15",
+     "positive": false,
+     "score": 0
+    }
+   },
+   "PHQ9": {
+    "history": [
+     {
+      "band": "minimal",
+      "complete": true,
+      "date": "2025-01-15",
+      "positive": false,
+      "score": 1
+     }
+    ],
+    "latest": {
+     "band": "minimal",
+     "complete": true,
+     "date": "2025-01-15",
+     "positive": false,
+     "score": 1
+    }
+   }
+  },
+  "site": {
+   "id": "S06",
+   "name": "Fir Clinic"
+  }
+ }
+}

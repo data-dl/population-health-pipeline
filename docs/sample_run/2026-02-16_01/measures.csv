@@ -1,0 +1,118 @@
+measure_id,measure_name,direction,site_id,denominator,numerator,rate
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,ALL,407,285,0.7002
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S01,52,38,0.7308
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S02,35,21,0.6
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S03,33,25,0.7576
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S04,43,32,0.7442
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S05,35,25,0.7143
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S06,31,23,0.7419
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S07,39,25,0.641
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S08,14,6,0.4286
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S09,32,24,0.75
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S10,25,19,0.76
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S11,24,15,0.625
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,S12,44,32,0.7273
+DEP_SCREEN,Depression screening,higher_better,ALL,3520,2612,0.742
+DEP_SCREEN,Depression screening,higher_better,S01,392,322,0.8214
+DEP_SCREEN,Depression screening,higher_better,S02,275,219,0.7964
+DEP_SCREEN,Depression screening,higher_better,S03,336,232,0.6905
+DEP_SCREEN,Depression screening,higher_better,S04,252,220,0.873
+DEP_SCREEN,Depression screening,higher_better,S05,378,238,0.6296
+DEP_SCREEN,Depression screening,higher_better,S06,241,167,0.6929
+DEP_SCREEN,Depression screening,higher_better,S07,282,239,0.8475
+DEP_SCREEN,Depression screening,higher_better,S08,178,102,0.573
+DEP_SCREEN,Depression screening,higher_better,S09,344,248,0.7209
+DEP_SCREEN,Depression screening,higher_better,S10,232,191,0.8233
+DEP_SCREEN,Depression screening,higher_better,S11,257,164,0.6381
+DEP_SCREEN,Depression screening,higher_better,S12,353,270,0.7649
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,ALL,307,141,0.4593
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S01,33,11,0.3333
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S02,25,9,0.36
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S03,40,19,0.475
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S04,23,9,0.3913
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S05,38,14,0.3684
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S06,23,16,0.6957
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S07,20,12,0.6
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S08,10,7,0.7
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S09,28,12,0.4286
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S10,19,11,0.5789
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S11,21,8,0.381
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,S12,27,13,0.4815
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,ALL,307,114,0.3713
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S01,33,17,0.5152
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S02,25,11,0.44
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S03,40,18,0.45
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S04,23,8,0.3478
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S05,38,13,0.3421
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S06,23,4,0.1739
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S07,20,6,0.3
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S08,10,3,0.3
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S09,28,13,0.4643
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S10,19,6,0.3158
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S11,21,5,0.2381
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,S12,27,10,0.3704
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,ALL,307,272,0.886
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S01,33,28,0.8485
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S02,25,22,0.88
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S03,40,34,0.85
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S04,23,20,0.8696
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S05,38,34,0.8947
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S06,23,21,0.913
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S07,20,18,0.9
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S08,10,9,0.9
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S09,28,22,0.7857
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S10,19,18,0.9474
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S11,21,21,1.0
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,S12,27,25,0.9259
+PDC_DIABETES,Adherence: diabetes medications,higher_better,ALL,322,203,0.6304
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S01,34,27,0.7941
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S02,27,19,0.7037
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S03,39,21,0.5385
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S04,19,7,0.3684
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S05,38,25,0.6579
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S06,28,19,0.6786
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S07,21,11,0.5238
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S08,14,11,0.7857
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S09,31,21,0.6774
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S10,21,13,0.619
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S11,20,12,0.6
+PDC_DIABETES,Adherence: diabetes medications,higher_better,S12,30,17,0.5667
+PDC_RAS,Adherence: RAS antagonists,higher_better,ALL,690,434,0.629
+PDC_RAS,Adherence: RAS antagonists,higher_better,S01,72,44,0.6111
+PDC_RAS,Adherence: RAS antagonists,higher_better,S02,53,33,0.6226
+PDC_RAS,Adherence: RAS antagonists,higher_better,S03,80,46,0.575
+PDC_RAS,Adherence: RAS antagonists,higher_better,S04,42,27,0.6429
+PDC_RAS,Adherence: RAS antagonists,higher_better,S05,82,56,0.6829
+PDC_RAS,Adherence: RAS antagonists,higher_better,S06,47,36,0.766
+PDC_RAS,Adherence: RAS antagonists,higher_better,S07,52,37,0.7115
+PDC_RAS,Adherence: RAS antagonists,higher_better,S08,34,19,0.5588
+PDC_RAS,Adherence: RAS antagonists,higher_better,S09,62,36,0.5806
+PDC_RAS,Adherence: RAS antagonists,higher_better,S10,37,20,0.5405
+PDC_RAS,Adherence: RAS antagonists,higher_better,S11,55,35,0.6364
+PDC_RAS,Adherence: RAS antagonists,higher_better,S12,74,45,0.6081
+PDC_STATIN,Adherence: statins,higher_better,ALL,553,346,0.6257
+PDC_STATIN,Adherence: statins,higher_better,S01,59,34,0.5763
+PDC_STATIN,Adherence: statins,higher_better,S02,46,27,0.587
+PDC_STATIN,Adherence: statins,higher_better,S03,56,38,0.6786
+PDC_STATIN,Adherence: statins,higher_better,S04,34,22,0.6471
+PDC_STATIN,Adherence: statins,higher_better,S05,58,33,0.569
+PDC_STATIN,Adherence: statins,higher_better,S06,29,17,0.5862
+PDC_STATIN,Adherence: statins,higher_better,S07,43,26,0.6047
+PDC_STATIN,Adherence: statins,higher_better,S08,31,25,0.8065
+PDC_STATIN,Adherence: statins,higher_better,S09,51,34,0.6667
+PDC_STATIN,Adherence: statins,higher_better,S10,45,30,0.6667
+PDC_STATIN,Adherence: statins,higher_better,S11,33,18,0.5455
+PDC_STATIN,Adherence: statins,higher_better,S12,68,42,0.6176
+SDOH_SCREEN,Social needs screening,higher_better,ALL,3289,1316,0.4001
+SDOH_SCREEN,Social needs screening,higher_better,S01,358,157,0.4385
+SDOH_SCREEN,Social needs screening,higher_better,S02,247,102,0.413
+SDOH_SCREEN,Social needs screening,higher_better,S03,317,117,0.3691
+SDOH_SCREEN,Social needs screening,higher_better,S04,235,119,0.5064
+SDOH_SCREEN,Social needs screening,higher_better,S05,354,118,0.3333
+SDOH_SCREEN,Social needs screening,higher_better,S06,224,87,0.3884
+SDOH_SCREEN,Social needs screening,higher_better,S07,265,141,0.5321
+SDOH_SCREEN,Social needs screening,higher_better,S08,171,52,0.3041
+SDOH_SCREEN,Social needs screening,higher_better,S09,316,121,0.3829
+SDOH_SCREEN,Social needs screening,higher_better,S10,221,92,0.4163
+SDOH_SCREEN,Social needs screening,higher_better,S11,246,79,0.3211
+SDOH_SCREEN,Social needs screening,higher_better,S12,335,131,0.391

@@ -1,0 +1,46 @@
+# Pipeline settings. Paths are relative to the workspace root (the repository by default,
+# or the folder given with --workspace).
+
+network: Demo Community Health Network (fictional, twelve clinics and a mobile unit)
+
+paths:
+  inbox: demo/inbox            # supplier drop; the demo organises it by arrival date
+  lake: workspace/lake         # immutable copies of every file, addressed by checksum
+  warehouse: workspace/warehouse.duckdb
+  docstore: workspace/docstore # document collections (restricted and demo)
+  extracts: workspace/extracts # de-identified flat extracts
+  runs: workspace/runs         # one evidence folder per run
+
+# Roster first so the other feeds can check patients against it; a feed that runs before the
+# roster is still safe - its unmatched rows are held, and re-checked once the roster changes.
+feeds_order: [roster, screenings, labs, appointments, pharmacy]
+
+measurement:
+  year: 2025
+  # The 2025 results were first reported from the 2026-02-16 extract. Rows for 2025 that arrive in
+  # any later extract restate closed results, and are announced as such.
+  closed_after: 2026-02-16
+
+alerts:
+  status_channel: "#data-ops-status"
+  error_channel: "#data-ops-alerts"
+  webhook_env: POPHEALTH_WEBHOOK_URL   # posting is off unless this variable is set
+
+freshness:
+  # A published feed whose newest event is older than this many days is reported as stale.
+  stale_after_days:
+    screenings: 14
+    labs: 14
+    appointments: 10
+    pharmacy: 14
+
+documents:
+  workers: 4
+
+deidentification:
+  demo_policy: demo_site
+  extract_policy: safe_harbor
+  min_group_size: 11          # smallest quasi-identifier group reported as safe in extracts
+
+reporting:
+  min_cell_size: 11           # cells below this are suppressed in stratified results

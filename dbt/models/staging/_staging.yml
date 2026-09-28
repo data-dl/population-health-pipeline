@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: stg_patients
+    description: Current roster, the columns measures and equity reporting use.
+    columns:
+      - name: patient_id
+        tests: [unique, not_null]
+      - name: site_id
+        tests: [not_null]
+      - name: sex
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["F", "M", "X", "U"]
+      - name: payer_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["commercial", "government", "marketplace", "self_pay", "unknown"]
+  - name: stg_patient_conditions
+    columns:
+      - name: patient_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_patients')
+                field: patient_id
+  - name: stg_screening_events
+    columns:
+      - name: instrument
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["PHQ9", "GAD7", "SDOH5"]
+      - name: patient_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_patients')
+                field: patient_id
+  - name: stg_lab_results
+    columns:
+      - name: lab_result_id
+        tests: [unique, not_null]
+      - name: analyte
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["HBA1C", "LDL"]
+  - name: stg_appointments
+    columns:
+      - name: status
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["completed", "no_show", "cancelled", "scheduled"]
+  - name: stg_pharmacy_fills
+    columns:
+      - name: claim_id
+        tests: [unique, not_null]
+      - name: days_supply
+        tests:
+          - value_between:
+              arguments:
+                min_value: 1
+                max_value: 365

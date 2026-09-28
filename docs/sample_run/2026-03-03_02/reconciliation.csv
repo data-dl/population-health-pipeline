@@ -1,0 +1,1 @@
+feed,name,rows_raw,rows_malformed,rows_staged,rows_passed,rows_quarantined,rows_inserted,rows_updated,rows_unchanged,rows_deduped,rows_removed,raw = staged + malformed,staged = passed + quarantined,passed = inserted + updated + unchanged + deduped

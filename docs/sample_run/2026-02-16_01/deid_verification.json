@@ -1,0 +1,97 @@
+{
+ "passed": true,
+ "checks": [
+  {
+   "check": "no real record number anywhere",
+   "passed": true,
+   "detail": "searched 300,004 strings"
+  },
+  {
+   "check": "no real full name anywhere",
+   "passed": true,
+   "detail": "searched 300,004 strings"
+  },
+  {
+   "check": "no real e-mail anywhere",
+   "passed": true,
+   "detail": "searched 300,004 strings"
+  },
+  {
+   "check": "no real phone anywhere",
+   "passed": true,
+   "detail": "searched 300,004 strings"
+  },
+  {
+   "check": "no real street address anywhere",
+   "passed": true,
+   "detail": "searched 300,004 strings"
+  },
+  {
+   "check": "every demo patient differs from the real one",
+   "passed": true,
+   "detail": "4,981 patients compared"
+  },
+  {
+   "check": "dates moved by one consistent, non-zero shift",
+   "passed": true,
+   "detail": "birth dates checked against shifts"
+  },
+  {
+   "check": "policy transforms every registered identifier path",
+   "passed": true,
+   "detail": "17 paths covered"
+  },
+  {
+   "check": "patients point at clinics, worklists at patients",
+   "passed": true,
+   "detail": "all references resolve"
+  },
+  {
+   "check": "extract carries only allowed columns",
+   "passed": true,
+   "detail": "ok"
+  },
+  {
+   "check": "no age above 89 and no birth year for 90+",
+   "passed": true,
+   "detail": "ok"
+  },
+  {
+   "check": "restricted ZIP3 prefixes replaced by 000",
+   "passed": true,
+   "detail": "ok"
+  }
+ ],
+ "group_sizes": [
+  {
+   "quasi_identifiers": [
+    "birth_year",
+    "sex",
+    "zip3"
+   ],
+   "groups": 781,
+   "smallest_group": 1,
+   "records_in_groups_below": 3334,
+   "threshold": 11,
+   "share_below": 0.669
+  },
+  {
+   "quasi_identifiers": [
+    "age_band",
+    "sex",
+    "zip3"
+   ],
+   "groups": 57,
+   "smallest_group": 1,
+   "records_in_groups_below": 55,
+   "threshold": 11,
+   "share_below": 0.011
+  }
+ ],
+ "documents": {
+  "patients": 4981,
+  "clinics": 12,
+  "worklists": 24
+ },
+ "extract_rows": 4981
+}

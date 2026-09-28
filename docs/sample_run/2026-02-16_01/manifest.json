@@ -1,0 +1,118 @@
+{
+ "run_id": "2026-02-16_01",
+ "as_of": "2026-02-16",
+ "pophealth": "0.1.0",
+ "config_hash": "fbaef3eda911e47b",
+ "dbt_project_hash": "3d708a2975e89843",
+ "files_registered": [
+  {
+   "name": "appointments_main_20260216.csv",
+   "feed": "appointments",
+   "sha256": "c092c20019f73906149734c3def0f12fb70c3fc1d106a93f06c75c75d69824ff",
+   "status": "loaded"
+  },
+  {
+   "name": "appointments_mobile_20260216.csv",
+   "feed": "appointments",
+   "sha256": "12fb0583a137b6f521ead3e64686c96e33ae062b3b69b68ec74dc8a5c5859466",
+   "status": "loaded"
+  },
+  {
+   "name": "labs_20260216.csv",
+   "feed": "labs",
+   "sha256": "d821fbe9d43c2d4cfa1400fd91c50779c540b6d012e600f33c8ea3778c094735",
+   "status": "loaded"
+  },
+  {
+   "name": "roster_20260216.csv",
+   "feed": "roster",
+   "sha256": "cfbb6212cdd7d09eeaf5d5db31382871c13a2e20c7e6d6c97166343af2379bf7",
+   "status": "loaded"
+  },
+  {
+   "name": "rx_claims_20260216.csv",
+   "feed": "pharmacy",
+   "sha256": "b0963897ba780666813b651a9458b60c5115df4778a423fc47b36ad7912e6302",
+   "status": "loaded"
+  },
+  {
+   "name": "screenings_20260216.csv",
+   "feed": "screenings",
+   "sha256": "e2da031cf157895111d139eaa44d66016b72bf1837e7d9b0938fb33780d4fd99",
+   "status": "loaded"
+  }
+ ],
+ "published": [
+  {
+   "feed": "appointments",
+   "table": "appointments",
+   "rows": 15617,
+   "content_hash": "8ebad1678dbb54a15830b32c857ee1b6",
+   "changed": true
+  },
+  {
+   "feed": "labs",
+   "table": "lab_results",
+   "rows": 2236,
+   "content_hash": "3acbec068430adfe8cb08edcf0cb3b0d",
+   "changed": true
+  },
+  {
+   "feed": "pharmacy",
+   "table": "pharmacy_claims",
+   "rows": 14020,
+   "content_hash": "cf143a7f6bd211de56dc5b3df6f0b8a9",
+   "changed": true
+  },
+  {
+   "feed": "pharmacy",
+   "table": "pharmacy_fills",
+   "rows": 13180,
+   "content_hash": "ac5f5c07ea8a52c27e696e0fc6cbf6c2",
+   "changed": true
+  },
+  {
+   "feed": "roster",
+   "table": "patient_attribution_history",
+   "rows": 4981,
+   "content_hash": "01e43f2faec4b74803a9c531dd413c31",
+   "changed": true
+  },
+  {
+   "feed": "roster",
+   "table": "patient_conditions",
+   "rows": 2812,
+   "content_hash": "1f9d1a38539f8641dc4a91da2dfea928",
+   "changed": true
+  },
+  {
+   "feed": "roster",
+   "table": "patients",
+   "rows": 4981,
+   "content_hash": "a7e70ab9d7d1c541c9c0fd0f6b900e0c",
+   "changed": true
+  },
+  {
+   "feed": "screenings",
+   "table": "screening_events",
+   "rows": 7333,
+   "content_hash": "59f17b7b689ef3991fd702a53f9ab018",
+   "changed": true
+  },
+  {
+   "feed": "screenings",
+   "table": "screening_items",
+   "rows": 54608,
+   "content_hash": "f2d3e525d9c24146b4f1c658664a07ac",
+   "changed": true
+  }
+ ],
+ "gates": {
+  "appointments": "PUBLISH",
+  "labs": "PUBLISH",
+  "pharmacy": "PUBLISH",
+  "roster": "PUBLISH",
+  "screenings": "PUBLISH"
+ },
+ "deidentification_passed": true
+}

@@ -1,0 +1,7 @@
+run_id,as_of,feed,source,published_table,event_column,last_arrival,last_extract,expected_next,delivery_status,latest_delivered_event,latest_published_event,days_behind,pipeline_status,overall,detail
+2026-02-16_01,2026-02-16,roster,ehr_roster,audit.loads (snapshot extract),extract_date,2026-02-16,2026-02-16,2026-02-23,ON_TIME,2026-02-16,2026-02-16,0,OK,OK,
+2026-02-16_01,2026-02-16,screenings,screening_platform,published.screening_events,screen_date,2026-02-16,2026-02-16,2026-02-23,ON_TIME,2026-02-13,2026-02-13,0,OK,OK,
+2026-02-16_01,2026-02-16,labs,reference_lab,published.lab_results,collected_date,2026-02-16,2026-02-16,2026-02-23,ON_TIME,2026-02-13,2026-02-13,0,OK,OK,
+2026-02-16_01,2026-02-16,appointments,clinic_scheduling,published.appointments,appt_date,2026-02-16,2026-02-16,2026-02-23,ON_TIME,2026-02-15,2026-02-13,2,OK,OK,
+2026-02-16_01,2026-02-16,appointments,mobile_unit,published.appointments,appt_date,2026-02-16,2026-02-16,2026-02-23,ON_TIME,2026-02-15,2026-02-13,2,OK,OK,
+2026-02-16_01,2026-02-16,pharmacy,pharmacy_claims,published.pharmacy_fills,fill_date,2026-02-16,2026-02-16,2026-02-23,ON_TIME,2026-02-15,2026-02-15,0,OK,OK,

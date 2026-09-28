@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Everything a run produces is rebuilt from the synthetic inbox: the lake, the DuckDB
+# warehouse, the document store, run evidence and dbt's working folders.
+workspace/
+build/
+demo/inbox/
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+*.duckdb
+*.duckdb.wal
+
+# Private, never committed: local blocklists and notes.
+privacy/*.local.txt
+.rlib/

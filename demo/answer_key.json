@@ -1,0 +1,3499 @@
+{
+ "seed": 20260926,
+ "extracts": [
+  "2026-02-16",
+  "2026-02-23",
+  "2026-03-02"
+ ],
+ "redelivery_arrival": "2026-03-03",
+ "missing_files": [
+  {
+   "feed": "pharmacy",
+   "source": "pharmacy_claims",
+   "extract": "2026-03-02",
+   "name": "rx_claims_20260302.csv"
+  }
+ ],
+ "files": [
+  {
+   "name": "roster_20260216.csv",
+   "feed": "roster",
+   "source": "ehr_roster",
+   "arrival": "2026-02-16",
+   "extract": "2026-02-16",
+   "rows": 4990,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "roster_20260223.csv",
+   "feed": "roster",
+   "source": "ehr_roster",
+   "arrival": "2026-02-23",
+   "extract": "2026-02-23",
+   "rows": 5002,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "roster_20260302.csv",
+   "feed": "roster",
+   "source": "ehr_roster",
+   "arrival": "2026-03-02",
+   "extract": "2026-03-02",
+   "rows": 5000,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "screenings_20260216.csv",
+   "feed": "screenings",
+   "source": "screening_platform",
+   "arrival": "2026-02-16",
+   "extract": "2026-02-16",
+   "rows": 3049,
+   "layout": 1,
+   "outcome": "loaded",
+   "counts": {
+    "deduped": 5
+   }
+  },
+  {
+   "name": "screenings_20260223.csv",
+   "feed": "screenings",
+   "source": "screening_platform",
+   "arrival": "2026-02-23",
+   "extract": "2026-02-23",
+   "rows": 67,
+   "layout": 1,
+   "outcome": "loaded",
+   "counts": {
+    "unchanged": 10
+   }
+  },
+  {
+   "name": "screenings_20260302.csv",
+   "feed": "screenings",
+   "source": "screening_platform",
+   "arrival": "2026-03-02",
+   "extract": "2026-03-02",
+   "rows": 49,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "labs_20260216.csv",
+   "feed": "labs",
+   "source": "reference_lab",
+   "arrival": "2026-02-16",
+   "extract": "2026-02-16",
+   "rows": 2248,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "labs_20260223.csv",
+   "feed": "labs",
+   "source": "reference_lab",
+   "arrival": "2026-02-23",
+   "extract": "2026-02-23",
+   "rows": 55,
+   "layout": 1,
+   "outcome": "loaded",
+   "counts": {
+    "updated": 3
+   }
+  },
+  {
+   "name": "labs_20260302.csv",
+   "feed": "labs",
+   "source": "reference_lab",
+   "arrival": "2026-03-02",
+   "extract": "2026-03-02",
+   "rows": 38,
+   "layout": 2,
+   "outcome": "loaded"
+  },
+  {
+   "name": "appointments_main_20260216.csv",
+   "feed": "appointments",
+   "source": "clinic_scheduling",
+   "arrival": "2026-02-16",
+   "extract": "2026-02-16",
+   "rows": 14371,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "appointments_mobile_20260216.csv",
+   "feed": "appointments",
+   "source": "mobile_unit",
+   "arrival": "2026-02-16",
+   "extract": "2026-02-16",
+   "rows": 1270,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "appointments_main_20260223.csv",
+   "feed": "appointments",
+   "source": "clinic_scheduling",
+   "arrival": "2026-02-23",
+   "extract": "2026-02-23",
+   "rows": 418,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "appointments_mobile_20260223.csv",
+   "feed": "appointments",
+   "source": "mobile_unit",
+   "arrival": "2026-02-23",
+   "extract": "2026-02-23",
+   "rows": 45,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "appointments_main_20260302.csv",
+   "feed": "appointments",
+   "source": "clinic_scheduling",
+   "arrival": "2026-03-02",
+   "extract": "2026-03-02",
+   "rows": 135,
+   "layout": 1,
+   "outcome": "blocked",
+   "rule": "APT-001"
+  },
+  {
+   "name": "appointments_main_20260302_r1.csv",
+   "feed": "appointments",
+   "source": "clinic_scheduling",
+   "arrival": "2026-03-03",
+   "extract": "2026-03-02",
+   "rows": 387,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "appointments_mobile_20260302.csv",
+   "feed": "appointments",
+   "source": "mobile_unit",
+   "arrival": "2026-03-02",
+   "extract": "2026-03-02",
+   "rows": 31,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "rx_claims_20260216.csv",
+   "feed": "pharmacy",
+   "source": "pharmacy_claims",
+   "arrival": "2026-02-16",
+   "extract": "2026-02-16",
+   "rows": 14040,
+   "layout": 1,
+   "outcome": "loaded"
+  },
+  {
+   "name": "rx_claims_20260223.csv",
+   "feed": "pharmacy",
+   "source": "pharmacy_claims",
+   "arrival": "2026-02-23",
+   "extract": "2026-02-23",
+   "rows": 290,
+   "layout": 1,
+   "outcome": "loaded"
+  }
+ ],
+ "planted": [
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 532,
+   "key": "clinic_scheduling:A9900031",
+   "kind": "appointment_unknown_site",
+   "expect": "quarantined",
+   "rule": "APT-007",
+   "final": "held",
+   "id": "P0001"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 793,
+   "key": "clinic_scheduling:A9900032",
+   "kind": "appointment_unknown_site",
+   "expect": "quarantined",
+   "rule": "APT-007",
+   "final": "held",
+   "id": "P0002"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 1095,
+   "key": "clinic_scheduling:A10322125",
+   "kind": "appointment_status_unmapped",
+   "expect": "quarantined",
+   "rule": "APT-006",
+   "final": "held",
+   "id": "P0003"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 1262,
+   "key": "clinic_scheduling:A9900033",
+   "kind": "appointment_unknown_site",
+   "expect": "quarantined",
+   "rule": "APT-007",
+   "final": "held",
+   "id": "P0004"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 1384,
+   "key": "clinic_scheduling:A10302846",
+   "kind": "appointment_status_unmapped",
+   "expect": "quarantined",
+   "rule": "APT-006",
+   "final": "held",
+   "id": "P0005"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 2973,
+   "key": "clinic_scheduling:A10325421",
+   "kind": "appointment_visit_type_unmapped",
+   "expect": "warned",
+   "rule": "APT-011",
+   "id": "P0006"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 3221,
+   "key": "clinic_scheduling:A10315831",
+   "kind": "appointment_visit_type_unmapped",
+   "expect": "warned",
+   "rule": "APT-011",
+   "id": "P0007"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 4185,
+   "key": "clinic_scheduling:A10307551",
+   "kind": "appointment_status_unmapped",
+   "expect": "quarantined",
+   "rule": "APT-006",
+   "final": "held",
+   "id": "P0008"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 4187,
+   "key": "clinic_scheduling:A9900035",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "held",
+   "id": "P0009"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 5635,
+   "key": "clinic_scheduling:A10311313",
+   "kind": "appointment_visit_type_unmapped",
+   "expect": "warned",
+   "rule": "APT-011",
+   "id": "P0010"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 5693,
+   "key": "clinic_scheduling:A10305106",
+   "kind": "appointment_status_unmapped",
+   "expect": "quarantined",
+   "rule": "APT-006",
+   "final": "held",
+   "id": "P0011"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 7484,
+   "key": "clinic_scheduling:A9900036",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "held",
+   "id": "P0012"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 7869,
+   "key": "clinic_scheduling:A10319225",
+   "kind": "appointment_visit_type_unmapped",
+   "expect": "warned",
+   "rule": "APT-011",
+   "id": "P0013"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 7974,
+   "key": "clinic_scheduling:A10325936",
+   "kind": "appointment_visit_type_unmapped",
+   "expect": "warned",
+   "rule": "APT-011",
+   "id": "P0014"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 8914,
+   "key": "clinic_scheduling:A10308640",
+   "kind": "appointment_status_unmapped",
+   "expect": "quarantined",
+   "rule": "APT-006",
+   "final": "held",
+   "id": "P0015"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 11701,
+   "key": "clinic_scheduling:A10306740",
+   "kind": "appointment_status_unmapped",
+   "expect": "quarantined",
+   "rule": "APT-006",
+   "final": "held",
+   "id": "P0016"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 11911,
+   "key": "clinic_scheduling:A9900034",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "held",
+   "id": "P0017"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13634,
+   "key": "clinic_scheduling:A10305521",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0018"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13641,
+   "key": "clinic_scheduling:A10307262",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0019"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13651,
+   "key": "clinic_scheduling:A10311215",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0020"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13658,
+   "key": "clinic_scheduling:A10314085",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0021"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13668,
+   "key": "clinic_scheduling:A10318130",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0022"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13682,
+   "key": "clinic_scheduling:A10325991",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0023"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13744,
+   "key": "clinic_scheduling:A10305787",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0024"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13767,
+   "key": "clinic_scheduling:A10319566",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0025"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13785,
+   "key": "clinic_scheduling:A10309164",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0026"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13798,
+   "key": "clinic_scheduling:A10316802",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0027"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13806,
+   "key": "clinic_scheduling:A10326816",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0028"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260216.csv",
+   "row": 13810,
+   "key": "clinic_scheduling:A10329778",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "APT-009",
+   "final": "released",
+   "id": "P0029"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260223.csv",
+   "row": 223,
+   "key": "clinic_scheduling:A9900038",
+   "kind": "appointment_completed_in_future",
+   "expect": "quarantined",
+   "rule": "APT-008",
+   "final": "held",
+   "id": "P0030"
+  },
+  {
+   "feed": "appointments",
+   "file": "appointments_main_20260223.csv",
+   "row": 336,
+   "key": "clinic_scheduling:A9900037",
+   "kind": "appointment_completed_in_future",
+   "expect": "quarantined",
+   "rule": "APT-008",
+   "final": "held",
+   "id": "P0031"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 55,
+   "key": "L70103478",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0032"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 69,
+   "key": "L70102621",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0033"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 101,
+   "key": "L70103300",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0034"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 139,
+   "key": "L70104246",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0035"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 287,
+   "key": "L70100301",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0036"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 321,
+   "key": "L9900026",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "LAB-011",
+   "final": "held",
+   "id": "P0037"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 346,
+   "key": "L70100461",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0038"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 500,
+   "key": "L70104061",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0039"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 780,
+   "key": "L70103427",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0040"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 847,
+   "key": "L70104429",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0041"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 894,
+   "key": "L70102516",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0042"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 920,
+   "key": "L70103481",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0043"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 921,
+   "key": "L70103907",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0044"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 939,
+   "key": "L70104417",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0045"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 940,
+   "key": "L9900020",
+   "kind": "lab_non_reportable",
+   "expect": "quarantined",
+   "rule": "LAB-008",
+   "final": "held",
+   "id": "P0046"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 941,
+   "key": "L9900023",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "LAB-011",
+   "final": "held",
+   "id": "P0047"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 967,
+   "key": "L70100992",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0048"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 983,
+   "key": "L70102446",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0049"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1007,
+   "key": "L70100169",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0050"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1040,
+   "key": "L9900017",
+   "kind": "lab_non_reportable",
+   "expect": "quarantined",
+   "rule": "LAB-008",
+   "final": "held",
+   "id": "P0051"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1067,
+   "key": "L9900016",
+   "kind": "lab_non_reportable",
+   "expect": "quarantined",
+   "rule": "LAB-008",
+   "final": "held",
+   "id": "P0052"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1118,
+   "key": "L70103796",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0053"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1166,
+   "key": "L9900018",
+   "kind": "lab_non_reportable",
+   "expect": "quarantined",
+   "rule": "LAB-008",
+   "final": "held",
+   "id": "P0054"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1272,
+   "key": "L70101537",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0055"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1325,
+   "key": "L70104217",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0056"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1347,
+   "key": "L9900019",
+   "kind": "lab_non_reportable",
+   "expect": "quarantined",
+   "rule": "LAB-008",
+   "final": "held",
+   "id": "P0057"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1380,
+   "key": "L70100018",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0058"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1451,
+   "key": "L9900024",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "LAB-011",
+   "final": "held",
+   "id": "P0059"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1561,
+   "key": "L70104597",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0060"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1602,
+   "key": "L70103800",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0061"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1835,
+   "key": "L70100430",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0062"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1841,
+   "key": "L70102047",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0063"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1845,
+   "key": "L70101214",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0064"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1850,
+   "key": "L70103308",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0065"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1900,
+   "key": "L70104273",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0066"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1910,
+   "key": "L70102964",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0067"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1922,
+   "key": "L9900021",
+   "kind": "lab_implausible_value",
+   "expect": "quarantined",
+   "rule": "LAB-010",
+   "final": "held",
+   "id": "P0068"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1947,
+   "key": "L9900025",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "LAB-011",
+   "final": "held",
+   "id": "P0069"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 1954,
+   "key": "L9900022",
+   "kind": "lab_implausible_value",
+   "expect": "quarantined",
+   "rule": "LAB-010",
+   "final": "held",
+   "id": "P0070"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 2084,
+   "key": "L70100661",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0071"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 2136,
+   "key": "L70101956",
+   "kind": "leading_zeros_lost",
+   "expect": "repaired",
+   "rule": "LAB-003",
+   "id": "P0072"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260216.csv",
+   "row": 2231,
+   "key": "L70104111",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "LAB-011",
+   "final": "released",
+   "id": "P0073"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 1,
+   "key": "L70102619",
+   "kind": "corrected_result",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0074"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 2,
+   "key": "L70101411",
+   "kind": "corrected_result",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0075"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 3,
+   "key": "L70100776",
+   "kind": "corrected_result",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0076"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 4,
+   "key": "L70100687",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0077"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 5,
+   "key": "L70101101",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0078"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 6,
+   "key": "L9900027",
+   "kind": "lab_implausible_value",
+   "expect": "quarantined",
+   "rule": "LAB-010",
+   "final": "held",
+   "id": "P0079"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 7,
+   "key": "L70104501",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0080"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 8,
+   "key": "L70103228",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0081"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 9,
+   "key": "L70101331",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0082"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 10,
+   "key": "L70100747",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0083"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 11,
+   "key": "L70103617",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0084"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 12,
+   "key": "L70102134",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0085"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 13,
+   "key": "L70103903",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0086"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 14,
+   "key": "L70104179",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0087"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 15,
+   "key": "L70104134",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0088"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 16,
+   "key": "L70101399",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0089"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 17,
+   "key": "L70102984",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0090"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 18,
+   "key": "L70103453",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0091"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 19,
+   "key": "L70103433",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0092"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260223.csv",
+   "row": 48,
+   "key": "L9900028",
+   "kind": "lab_implausible_value",
+   "expect": "quarantined",
+   "rule": "LAB-010",
+   "final": "held",
+   "id": "P0093"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260302.csv",
+   "row": 1,
+   "key": "ACC70102916",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0094"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260302.csv",
+   "row": 2,
+   "key": "ACC70103790",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0095"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260302.csv",
+   "row": 3,
+   "key": "ACC70100102",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0096"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260302.csv",
+   "row": 4,
+   "key": "ACC70100417",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0097"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260302.csv",
+   "row": 5,
+   "key": "ACC70102683",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0098"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260302.csv",
+   "row": 6,
+   "key": "ACC70104113",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0099"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260302.csv",
+   "row": 7,
+   "key": "ACC9900030",
+   "kind": "lab_unknown_unit",
+   "expect": "quarantined",
+   "rule": "LAB-009",
+   "final": "held",
+   "id": "P0100"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260302.csv",
+   "row": 8,
+   "key": "ACC70102358",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0101"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260302.csv",
+   "row": 9,
+   "key": "ACC70101614",
+   "kind": "late_result_closed_year",
+   "expect": "warned",
+   "rule": "LAB-013",
+   "id": "P0102"
+  },
+  {
+   "feed": "labs",
+   "file": "labs_20260302.csv",
+   "row": 23,
+   "key": "ACC9900029",
+   "kind": "lab_unknown_unit",
+   "expect": "quarantined",
+   "rule": "LAB-009",
+   "final": "held",
+   "id": "P0103"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 222,
+   "key": "RX9900044:P",
+   "kind": "claim_drug_not_tracked",
+   "expect": "quarantined",
+   "rule": "RX-008",
+   "final": "held",
+   "id": "P0104"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 1538,
+   "key": "RX9900039:P",
+   "kind": "claim_days_supply_invalid",
+   "expect": "quarantined",
+   "rule": "RX-006",
+   "final": "held",
+   "id": "P0105"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 4914,
+   "key": "RX9900040:P",
+   "kind": "claim_days_supply_invalid",
+   "expect": "quarantined",
+   "rule": "RX-006",
+   "final": "held",
+   "id": "P0106"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 5083,
+   "key": "RX9900045:P",
+   "kind": "claim_drug_not_tracked",
+   "expect": "quarantined",
+   "rule": "RX-008",
+   "final": "held",
+   "id": "P0107"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 6851,
+   "key": "RX9900047:P",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "held",
+   "id": "P0108"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 6880,
+   "key": "RX9900048:P",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "held",
+   "id": "P0109"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 8158,
+   "key": "RX9900043:P",
+   "kind": "claim_days_supply_invalid",
+   "expect": "quarantined",
+   "rule": "RX-006",
+   "final": "held",
+   "id": "P0110"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 10892,
+   "key": "RX9900046:P",
+   "kind": "claim_drug_not_tracked",
+   "expect": "quarantined",
+   "rule": "RX-008",
+   "final": "held",
+   "id": "P0111"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 12256,
+   "key": "RX9900042:P",
+   "kind": "claim_days_supply_invalid",
+   "expect": "quarantined",
+   "rule": "RX-006",
+   "final": "held",
+   "id": "P0112"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 12722,
+   "key": "RX9900041:P",
+   "kind": "claim_days_supply_invalid",
+   "expect": "quarantined",
+   "rule": "RX-006",
+   "final": "held",
+   "id": "P0113"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 13860,
+   "key": "RX610007108:P",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "released",
+   "id": "P0114"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 13864,
+   "key": "RX610010511:P",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "released",
+   "id": "P0115"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 13873,
+   "key": "RX610017248:P",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "released",
+   "id": "P0116"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 13874,
+   "key": "RX610017249:P",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "released",
+   "id": "P0117"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 13880,
+   "key": "RX610024941:P",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "released",
+   "id": "P0118"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 13915,
+   "key": "RX610005736:P",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "released",
+   "id": "P0119"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 13936,
+   "key": "RX610018747:P",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "released",
+   "id": "P0120"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 13937,
+   "key": "RX610018750:P",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "released",
+   "id": "P0121"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 13978,
+   "key": "RX610025646:P",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "released",
+   "id": "P0122"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260216.csv",
+   "row": 13979,
+   "key": "RX610025647:P",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "RX-010",
+   "final": "released",
+   "id": "P0123"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 10,
+   "key": "RX610009125:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0124"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 11,
+   "key": "RX610009884:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0125"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 15,
+   "key": "RX610012578:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0126"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 27,
+   "key": "RX610021769:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0127"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 31,
+   "key": "RX610022938:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0128"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 32,
+   "key": "RX610023908:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0129"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 33,
+   "key": "RX610024043:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0130"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 36,
+   "key": "RX610026806:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0131"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 37,
+   "key": "RX610027755:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0132"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 40,
+   "key": "RX610000817:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0133"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 45,
+   "key": "RX610002294:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0134"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 61,
+   "key": "RX610008139:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0135"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 68,
+   "key": "RX610012398:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0136"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 86,
+   "key": "RX610024605:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0137"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 92,
+   "key": "RX610001008:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0138"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 93,
+   "key": "RX610002548:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0139"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 97,
+   "key": "RX610005726:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0140"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 99,
+   "key": "RX610006861:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0141"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 108,
+   "key": "RX610015154:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0142"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 115,
+   "key": "RX610020322:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0143"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 119,
+   "key": "RX610021690:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0144"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 127,
+   "key": "RX610000003:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0145"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 131,
+   "key": "RX610003148:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0146"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 174,
+   "key": "RX610001488:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0147"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 177,
+   "key": "RX610002377:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0148"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 182,
+   "key": "RX610004718:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0149"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 187,
+   "key": "RX610008992:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0150"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 191,
+   "key": "RX610014115:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0151"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 203,
+   "key": "RX610020136:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0152"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 208,
+   "key": "RX610024071:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0153"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 217,
+   "key": "RX610004644:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0154"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 245,
+   "key": "RX610023820:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0155"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 248,
+   "key": "RX610026173:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0156"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 259,
+   "key": "RX610003613:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0157"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 260,
+   "key": "RX610004180:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0158"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 262,
+   "key": "RX610006658:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0159"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 266,
+   "key": "RX610010285:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0160"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 268,
+   "key": "RX610012743:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0161"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 281,
+   "key": "RX610022687:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0162"
+  },
+  {
+   "feed": "pharmacy",
+   "file": "rx_claims_20260223.csv",
+   "row": 288,
+   "key": "RX610025139:P",
+   "kind": "late_claim_closed_year",
+   "expect": "warned",
+   "rule": "RX-012",
+   "id": "P0163"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 257,
+   "key": "06194015",
+   "kind": "roster_conflicting_duplicate",
+   "expect": "quarantined",
+   "rule": "ROS-010",
+   "final": "superseded",
+   "id": "P0164"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 258,
+   "key": "06194015",
+   "kind": "roster_conflicting_duplicate",
+   "expect": "quarantined",
+   "rule": "ROS-010",
+   "final": "superseded",
+   "id": "P0165"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 519,
+   "key": "11846836",
+   "kind": "roster_unknown_site",
+   "expect": "quarantined",
+   "rule": "ROS-008",
+   "final": "superseded",
+   "id": "P0166"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 770,
+   "key": "16737863",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0167"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 803,
+   "key": "17602975",
+   "kind": "roster_unknown_site",
+   "expect": "quarantined",
+   "rule": "ROS-008",
+   "final": "superseded",
+   "id": "P0168"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 991,
+   "key": "21823123",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0169"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 1157,
+   "key": "25117982",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0170"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 1175,
+   "key": "25481004",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0171"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 1310,
+   "key": "27816493",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0172"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 1785,
+   "key": "36724111",
+   "kind": "roster_invalid_birth_date",
+   "expect": "quarantined",
+   "rule": "ROS-005",
+   "final": "superseded",
+   "id": "P0173"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 1786,
+   "key": "36748820",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0174"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 2187,
+   "key": "45026471",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0175"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 2307,
+   "key": "47388676",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0176"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 2511,
+   "key": "51732017",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0177"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 2543,
+   "key": "52245955",
+   "kind": "roster_invalid_birth_date",
+   "expect": "quarantined",
+   "rule": "ROS-005",
+   "final": "superseded",
+   "id": "P0178"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 3150,
+   "key": "63632004",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0179"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 3340,
+   "key": "67428270",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0180"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 4015,
+   "key": "81253435",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0181"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 4406,
+   "key": "88520644",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0182"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 4516,
+   "key": "90617332",
+   "kind": "roster_unknown_site",
+   "expect": "quarantined",
+   "rule": "ROS-008",
+   "final": "superseded",
+   "id": "P0183"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 4717,
+   "key": "94738148",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0184"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 4871,
+   "key": "97436318",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0185"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 4944,
+   "key": "98823744",
+   "kind": "roster_conflicting_duplicate",
+   "expect": "quarantined",
+   "rule": "ROS-010",
+   "final": "superseded",
+   "id": "P0186"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260216.csv",
+   "row": 4945,
+   "key": "98823744",
+   "kind": "roster_conflicting_duplicate",
+   "expect": "quarantined",
+   "rule": "ROS-010",
+   "final": "superseded",
+   "id": "P0187"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 257,
+   "key": "06194015",
+   "kind": "roster_conflicting_duplicate",
+   "expect": "quarantined",
+   "rule": "ROS-010",
+   "final": "superseded",
+   "id": "P0188"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 258,
+   "key": "06194015",
+   "kind": "roster_conflicting_duplicate",
+   "expect": "quarantined",
+   "rule": "ROS-010",
+   "final": "superseded",
+   "id": "P0189"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 519,
+   "key": "11846836",
+   "kind": "roster_unknown_site",
+   "expect": "quarantined",
+   "rule": "ROS-008",
+   "final": "superseded",
+   "id": "P0190"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 770,
+   "key": "16737863",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0191"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 803,
+   "key": "17602975",
+   "kind": "roster_unknown_site",
+   "expect": "quarantined",
+   "rule": "ROS-008",
+   "final": "superseded",
+   "id": "P0192"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 991,
+   "key": "21823123",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0193"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 1158,
+   "key": "25117982",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0194"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 1176,
+   "key": "25481004",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0195"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 1312,
+   "key": "27816493",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0196"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 1788,
+   "key": "36748820",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0197"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 2190,
+   "key": "45026471",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0198"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 2311,
+   "key": "47388676",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0199"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 2515,
+   "key": "51732017",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0200"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 3156,
+   "key": "63632004",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0201"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 3346,
+   "key": "67428270",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0202"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 4024,
+   "key": "81253435",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0203"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 4418,
+   "key": "88520644",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0204"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 4528,
+   "key": "90617332",
+   "kind": "roster_unknown_site",
+   "expect": "quarantined",
+   "rule": "ROS-008",
+   "final": "superseded",
+   "id": "P0205"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 4729,
+   "key": "94738148",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0206"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 4883,
+   "key": "97436318",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0207"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 4956,
+   "key": "98823744",
+   "kind": "roster_conflicting_duplicate",
+   "expect": "quarantined",
+   "rule": "ROS-010",
+   "final": "superseded",
+   "id": "P0208"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260223.csv",
+   "row": 4957,
+   "key": "98823744",
+   "kind": "roster_conflicting_duplicate",
+   "expect": "quarantined",
+   "rule": "ROS-010",
+   "final": "superseded",
+   "id": "P0209"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 518,
+   "key": "11846836",
+   "kind": "roster_unknown_site",
+   "expect": "quarantined",
+   "rule": "ROS-008",
+   "final": "held",
+   "id": "P0210"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 769,
+   "key": "16737863",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0211"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 802,
+   "key": "17602975",
+   "kind": "roster_unknown_site",
+   "expect": "quarantined",
+   "rule": "ROS-008",
+   "final": "held",
+   "id": "P0212"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 990,
+   "key": "21823123",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0213"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 1157,
+   "key": "25117982",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0214"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 1175,
+   "key": "25481004",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0215"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 1311,
+   "key": "27816493",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0216"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 1787,
+   "key": "36748820",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0217"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 2189,
+   "key": "45026471",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0218"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 2310,
+   "key": "47388676",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0219"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 2514,
+   "key": "51732017",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0220"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 3155,
+   "key": "63632004",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0221"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 3345,
+   "key": "67428270",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0222"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 4023,
+   "key": "81253435",
+   "kind": "roster_site_lowercase",
+   "expect": "repaired",
+   "rule": "ROS-007",
+   "id": "P0223"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 4417,
+   "key": "88520644",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0224"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 4527,
+   "key": "90617332",
+   "kind": "roster_unknown_site",
+   "expect": "quarantined",
+   "rule": "ROS-008",
+   "final": "held",
+   "id": "P0225"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 4728,
+   "key": "94738148",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0226"
+  },
+  {
+   "feed": "roster",
+   "file": "roster_20260302.csv",
+   "row": 4882,
+   "key": "97436318",
+   "kind": "roster_phone_malformed",
+   "expect": "warned",
+   "rule": "ROS-011",
+   "id": "P0227"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 81,
+   "key": "SCR5201376",
+   "kind": "screening_exact_duplicate",
+   "expect": "deduped",
+   "rule": "merge",
+   "id": "P0228"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 99,
+   "key": "SCR9900012",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "held",
+   "id": "P0229"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 150,
+   "key": "SCR5205970",
+   "kind": "screening_total_mismatch",
+   "expect": "warned",
+   "rule": "SCR-012",
+   "id": "P0230"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 157,
+   "key": "SCR5201666",
+   "kind": "screening_total_mismatch",
+   "expect": "warned",
+   "rule": "SCR-012",
+   "id": "P0231"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 230,
+   "key": "SCR5204325",
+   "kind": "screening_total_mismatch",
+   "expect": "warned",
+   "rule": "SCR-012",
+   "id": "P0232"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 272,
+   "key": "SCR9900011",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "held",
+   "id": "P0233"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 277,
+   "key": "SCR9900013",
+   "kind": "orphan_never_registered",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "held",
+   "id": "P0234"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 300,
+   "key": "SCR9900008",
+   "kind": "screening_admin_mode_unmapped",
+   "expect": "quarantined",
+   "rule": "SCR-009",
+   "final": "held",
+   "id": "P0235"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 534,
+   "key": "SCR5203625",
+   "kind": "screening_total_mismatch",
+   "expect": "warned",
+   "rule": "SCR-012",
+   "id": "P0236"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 615,
+   "key": "SCR9900003",
+   "kind": "screening_item_out_of_range",
+   "expect": "quarantined",
+   "rule": "SCR-007",
+   "final": "held",
+   "id": "P0237"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 745,
+   "key": "SCR9900009",
+   "kind": "screening_admin_mode_unmapped",
+   "expect": "quarantined",
+   "rule": "SCR-009",
+   "final": "held",
+   "id": "P0238"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 905,
+   "key": "SCR5203604",
+   "kind": "screening_exact_duplicate",
+   "expect": "deduped",
+   "rule": "merge",
+   "id": "P0239"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 1068,
+   "key": "SCR9900005",
+   "kind": "screening_item_out_of_range",
+   "expect": "quarantined",
+   "rule": "SCR-007",
+   "final": "held",
+   "id": "P0240"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 1079,
+   "key": "SCR5203493",
+   "kind": "screening_total_mismatch",
+   "expect": "warned",
+   "rule": "SCR-012",
+   "id": "P0241"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 1174,
+   "key": "SCR9900006",
+   "kind": "screening_item_out_of_range",
+   "expect": "quarantined",
+   "rule": "SCR-007",
+   "final": "held",
+   "id": "P0242"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 1334,
+   "key": "SCR5200980",
+   "kind": "screening_exact_duplicate",
+   "expect": "deduped",
+   "rule": "merge",
+   "id": "P0243"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 1358,
+   "key": "SCR9900001",
+   "kind": "screening_item_out_of_range",
+   "expect": "quarantined",
+   "rule": "SCR-007",
+   "final": "held",
+   "id": "P0244"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 1379,
+   "key": "SCR5204258",
+   "kind": "screening_exact_duplicate",
+   "expect": "deduped",
+   "rule": "merge",
+   "id": "P0245"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 1682,
+   "key": "SCR5201163",
+   "kind": "screening_total_mismatch",
+   "expect": "warned",
+   "rule": "SCR-012",
+   "id": "P0246"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 1831,
+   "key": "SCR5201243",
+   "kind": "screening_exact_duplicate",
+   "expect": "deduped",
+   "rule": "merge",
+   "id": "P0247"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 1878,
+   "key": "SCR9900010",
+   "kind": "screening_admin_mode_unmapped",
+   "expect": "quarantined",
+   "rule": "SCR-009",
+   "final": "held",
+   "id": "P0248"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 2491,
+   "key": "SCR9900007",
+   "kind": "screening_admin_mode_unmapped",
+   "expect": "quarantined",
+   "rule": "SCR-009",
+   "final": "held",
+   "id": "P0249"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 2511,
+   "key": "SCR5203594",
+   "kind": "screening_total_mismatch",
+   "expect": "warned",
+   "rule": "SCR-012",
+   "id": "P0250"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 2537,
+   "key": "SCR5204983",
+   "kind": "screening_total_mismatch",
+   "expect": "warned",
+   "rule": "SCR-012",
+   "id": "P0251"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 2807,
+   "key": "SCR9900004",
+   "kind": "screening_item_out_of_range",
+   "expect": "quarantined",
+   "rule": "SCR-007",
+   "final": "held",
+   "id": "P0252"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 2932,
+   "key": "SCR9900002",
+   "kind": "screening_item_out_of_range",
+   "expect": "quarantined",
+   "rule": "SCR-007",
+   "final": "held",
+   "id": "P0253"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 2987,
+   "key": "SCR5201135",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0254"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 2991,
+   "key": "SCR5201582",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0255"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 2994,
+   "key": "SCR5202391",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0256"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 2996,
+   "key": "SCR5203012",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0257"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 2998,
+   "key": "SCR5203865",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0258"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 3002,
+   "key": "SCR5205377",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0259"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 3019,
+   "key": "SCR5201216",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0260"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 3026,
+   "key": "SCR5204134",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0261"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 3034,
+   "key": "SCR5201996",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0262"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 3035,
+   "key": "SCR5203567",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0263"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 3036,
+   "key": "SCR5205596",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0264"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260216.csv",
+   "row": 3038,
+   "key": "SCR5206238",
+   "kind": "orphan_late_registration",
+   "expect": "quarantined",
+   "rule": "SCR-010",
+   "final": "released",
+   "id": "P0265"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260223.csv",
+   "row": 6,
+   "key": "SCR9900015",
+   "kind": "screening_future_date",
+   "expect": "quarantined",
+   "rule": "SCR-006",
+   "final": "held",
+   "id": "P0266"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260223.csv",
+   "row": 16,
+   "key": "SCR9900014",
+   "kind": "screening_future_date",
+   "expect": "quarantined",
+   "rule": "SCR-006",
+   "final": "held",
+   "id": "P0267"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260223.csv",
+   "row": 47,
+   "key": "SCR5203226",
+   "kind": "screening_key_conflict",
+   "expect": "quarantined",
+   "rule": "SCR-011",
+   "final": "held",
+   "id": "P0268"
+  },
+  {
+   "feed": "screenings",
+   "file": "screenings_20260223.csv",
+   "row": 48,
+   "key": "SCR5203226",
+   "kind": "screening_key_conflict",
+   "expect": "quarantined",
+   "rule": "SCR-011",
+   "final": "held",
+   "id": "P0269"
+  }
+ ],
+ "measures": {
+  "DM_A1C_TESTED": {
+   "ALL": [
+    273,
+    307
+   ],
+   "S01": [
+    28,
+    33
+   ],
+   "S02": [
+    22,
+    25
+   ],
+   "S03": [
+    34,
+    40
+   ],
+   "S04": [
+    19,
+    22
+   ],
+   "S05": [
+    34,
+    38
+   ],
+   "S06": [
+    22,
+    24
+   ],
+   "S07": [
+    18,
+    20
+   ],
+   "S08": [
+    9,
+    10
+   ],
+   "S09": [
+    23,
+    28
+   ],
+   "S10": [
+    18,
+    19
+   ],
+   "S11": [
+    21,
+    21
+   ],
+   "S12": [
+    25,
+    27
+   ]
+  },
+  "DM_A1C_CONTROLLED": {
+   "ALL": [
+    141,
+    307
+   ],
+   "S01": [
+    11,
+    33
+   ],
+   "S02": [
+    9,
+    25
+   ],
+   "S03": [
+    19,
+    40
+   ],
+   "S04": [
+    8,
+    22
+   ],
+   "S05": [
+    14,
+    38
+   ],
+   "S06": [
+    17,
+    24
+   ],
+   "S07": [
+    12,
+    20
+   ],
+   "S08": [
+    7,
+    10
+   ],
+   "S09": [
+    12,
+    28
+   ],
+   "S10": [
+    11,
+    19
+   ],
+   "S11": [
+    8,
+    21
+   ],
+   "S12": [
+    13,
+    27
+   ]
+  },
+  "DM_A1C_POOR": {
+   "ALL": [
+    114,
+    307
+   ],
+   "S01": [
+    17,
+    33
+   ],
+   "S02": [
+    11,
+    25
+   ],
+   "S03": [
+    18,
+    40
+   ],
+   "S04": [
+    8,
+    22
+   ],
+   "S05": [
+    13,
+    38
+   ],
+   "S06": [
+    4,
+    24
+   ],
+   "S07": [
+    6,
+    20
+   ],
+   "S08": [
+    3,
+    10
+   ],
+   "S09": [
+    13,
+    28
+   ],
+   "S10": [
+    6,
+    19
+   ],
+   "S11": [
+    5,
+    21
+   ],
+   "S12": [
+    10,
+    27
+   ]
+  },
+  "DEP_SCREEN": {
+   "ALL": [
+    2612,
+    3520
+   ],
+   "S01": [
+    322,
+    392
+   ],
+   "S02": [
+    220,
+    276
+   ],
+   "S03": [
+    230,
+    334
+   ],
+   "S04": [
+    220,
+    252
+   ],
+   "S05": [
+    238,
+    379
+   ],
+   "S06": [
+    168,
+    242
+   ],
+   "S07": [
+    240,
+    283
+   ],
+   "S08": [
+    103,
+    179
+   ],
+   "S09": [
+    247,
+    343
+   ],
+   "S10": [
+    191,
+    232
+   ],
+   "S11": [
+    164,
+    256
+   ],
+   "S12": [
+    269,
+    352
+   ]
+  },
+  "DEP_FOLLOWUP": {
+   "ALL": [
+    285,
+    407
+   ],
+   "S01": [
+    37,
+    51
+   ],
+   "S02": [
+    22,
+    36
+   ],
+   "S03": [
+    25,
+    33
+   ],
+   "S04": [
+    33,
+    44
+   ],
+   "S05": [
+    25,
+    35
+   ],
+   "S06": [
+    23,
+    31
+   ],
+   "S07": [
+    25,
+    39
+   ],
+   "S08": [
+    6,
+    14
+   ],
+   "S09": [
+    24,
+    32
+   ],
+   "S10": [
+    19,
+    25
+   ],
+   "S11": [
+    15,
+    24
+   ],
+   "S12": [
+    31,
+    43
+   ]
+  },
+  "PDC_DIABETES": {
+   "ALL": [
+    204,
+    323
+   ],
+   "S01": [
+    27,
+    33
+   ],
+   "S02": [
+    19,
+    27
+   ],
+   "S03": [
+    21,
+    39
+   ],
+   "S04": [
+    7,
+    18
+   ],
+   "S05": [
+    25,
+    38
+   ],
+   "S06": [
+    20,
+    29
+   ],
+   "S07": [
+    11,
+    22
+   ],
+   "S08": [
+    11,
+    14
+   ],
+   "S09": [
+    21,
+    31
+   ],
+   "S10": [
+    13,
+    21
+   ],
+   "S11": [
+    12,
+    21
+   ],
+   "S12": [
+    17,
+    30
+   ]
+  },
+  "PDC_RAS": {
+   "ALL": [
+    434,
+    690
+   ],
+   "S01": [
+    45,
+    73
+   ],
+   "S02": [
+    33,
+    53
+   ],
+   "S03": [
+    45,
+    79
+   ],
+   "S04": [
+    26,
+    40
+   ],
+   "S05": [
+    56,
+    82
+   ],
+   "S06": [
+    36,
+    47
+   ],
+   "S07": [
+    37,
+    53
+   ],
+   "S08": [
+    20,
+    35
+   ],
+   "S09": [
+    36,
+    62
+   ],
+   "S10": [
+    20,
+    37
+   ],
+   "S11": [
+    35,
+    55
+   ],
+   "S12": [
+    45,
+    74
+   ]
+  },
+  "PDC_STATIN": {
+   "ALL": [
+    349,
+    553
+   ],
+   "S01": [
+    35,
+    60
+   ],
+   "S02": [
+    28,
+    46
+   ],
+   "S03": [
+    38,
+    56
+   ],
+   "S04": [
+    23,
+    34
+   ],
+   "S05": [
+    33,
+    58
+   ],
+   "S06": [
+    17,
+    29
+   ],
+   "S07": [
+    26,
+    43
+   ],
+   "S08": [
+    25,
+    31
+   ],
+   "S09": [
+    34,
+    51
+   ],
+   "S10": [
+    30,
+    45
+   ],
+   "S11": [
+    19,
+    33
+   ],
+   "S12": [
+    41,
+    67
+   ]
+  },
+  "SDOH_SCREEN": {
+   "ALL": [
+    1316,
+    3289
+   ],
+   "S01": [
+    157,
+    357
+   ],
+   "S02": [
+    103,
+    247
+   ],
+   "S03": [
+    115,
+    315
+   ],
+   "S04": [
+    119,
+    234
+   ],
+   "S05": [
+    118,
+    355
+   ],
+   "S06": [
+    89,
+    225
+   ],
+   "S07": [
+    140,
+    267
+   ],
+   "S08": [
+    52,
+    172
+   ],
+   "S09": [
+    121,
+    316
+   ],
+   "S10": [
+    92,
+    221
+   ],
+   "S11": [
+    80,
+    246
+   ],
+   "S12": [
+    130,
+    334
+   ]
+  }
+ }
+}

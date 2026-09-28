@@ -1,0 +1,136 @@
+feed: appointments
+title: Appointments and visits
+description: >-
+  Appointments from two scheduling systems covering two populations - the clinics' EHR scheduling
+  and the mobile unit - in different layouts, unioned into one table. Deliveries are incremental:
+  new bookings plus status changes (a booked appointment later becomes completed, no-show or
+  cancelled), merged by source and appointment number.
+steward: Operations data steward
+supplier: Clinic scheduling and mobile unit scheduling
+snapshot: false
+delivery:
+  cadence_days: 7
+  grace_days: 0
+  time_column: appt_date
+  freshness: {table: appointments, column: appt_date, where: "status in ('completed', 'no_show')"}
+date_formats: ['%Y-%m-%d', '%m/%d/%Y']
+date_columns: [appt_date]
+natural_key: [source, appointment_id]
+
+sources:
+  clinic_scheduling:
+    file_pattern: '^appointments_main_(?P<extract>[0-9]{8})(?:_r(?P<redelivery>[0-9]+))?\.csv$'
+    layouts:
+      - version: 1
+        columns:
+          APPT_ID: appointment_id
+          MRN: patient_id
+          SITE: site_id
+          APPT_DATE: appt_date
+          VISIT_TYPE: visit_type
+          STATUS: status
+          PROVIDER: provider_name
+  mobile_unit:
+    file_pattern: '^appointments_mobile_(?P<extract>[0-9]{8})(?:_r(?P<redelivery>[0-9]+))?\.csv$'
+    layouts:
+      - version: 1
+        columns:
+          visit_id: appointment_id
+          mrn: patient_id
+          host_site: site_id
+          visit_date: appt_date
+          visit_kind: visit_type
+          visit_status: status
+
+columns:
+  - {name: source, type: VARCHAR, classification: operational, description: "clinic_scheduling or mobile_unit."}
+  - {name: appointment_id, type: VARCHAR, classification: operational, description: Appointment number within its source.}
+  - {name: patient_id, type: VARCHAR, classification: direct_identifier, description: Medical record number.}
+  - {name: site_id, type: VARCHAR, classification: operational, description: Clinic (for the mobile unit, the host clinic).}
+  - {name: appt_date, type: DATE, classification: direct_identifier, description: Appointment date.}
+  - {name: visit_type, type: VARCHAR, classification: operational, description: "office, telehealth, behavioral_health, nurse, mobile or other."}
+  - {name: status, type: VARCHAR, classification: operational, description: "completed, no_show, cancelled or scheduled."}
+  - {name: provider_name, type: VARCHAR, classification: operational, description: Rendering provider (clinic scheduling only; workforce).}
+
+rules:
+  - id: APT-001
+    type: volume
+    title: Delivery volume is in the usual range
+    dimension: completeness
+    action: block
+    min_ratio: 0.5
+    min_baseline_rows: 40
+    message: A file far smaller than the usual weekly delivery is most often a truncated extract; stopped until re-delivered.
+  - id: APT-002
+    type: date_format
+    title: Dates use the agreed format
+    dimension: conformity
+    action: warn
+  - id: APT-003
+    type: repair
+    title: Medical record numbers keep their leading zeros
+    dimension: conformity
+    action: repair
+    when: "regexp_full_match(patient_id, '[0-9]{1,7}')"
+    set: {patient_id: "lpad(patient_id, 8, '0')"}
+  - id: APT-004
+    type: required
+    title: Appointment, patient, clinic, date and status are present
+    dimension: completeness
+    action: quarantine
+    columns: [appointment_id, patient_id, site_id, appt_date_raw, status_raw]
+  - id: APT-005
+    type: parse
+    title: Appointment date is a real date
+    dimension: validity
+    action: quarantine
+    column: appt_date
+  - id: APT-006
+    type: mapped
+    title: Status code is mapped
+    dimension: conformity
+    action: quarantine
+    retryable: true
+    column: status
+    message: "Unmapped status code; add it to config/reference/code_maps.yaml and the held rows are released on the next run."
+  - id: APT-007
+    type: in_reference
+    title: Clinic exists
+    dimension: integrity
+    action: quarantine
+    column: site_id
+    reference: site_id
+  - id: APT-008
+    type: expression
+    title: Completed or missed appointments are not in the future
+    dimension: validity
+    action: quarantine
+    fail_when: "status in ('completed', 'no_show') and appt_date > _extract_date"
+    detail: "status || ' on ' || cast(appt_date as varchar)"
+  - id: APT-009
+    type: on_roster
+    title: Patient is on the roster
+    dimension: integrity
+    action: quarantine
+    retryable: true
+    column: patient_id
+  - id: APT-010
+    type: key_conflict
+    title: One version of each appointment per file
+    dimension: uniqueness
+    action: quarantine
+  - id: APT-011
+    type: mapped
+    title: Visit type is mapped
+    dimension: conformity
+    action: warn
+    column: visit_type
+    message: Unmapped visit type reported as other.
+  - id: APT-012
+    type: closed_period
+    title: Late rows for a closed measurement year are announced
+    dimension: timeliness
+    action: warn
+    column: appt_date
+
+published: [appointments]

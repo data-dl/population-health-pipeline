@@ -1,0 +1,47 @@
+# Screening instruments delivered by the screening platform, and how each is scored.
+# PHQ-9 and GAD-7 are public-domain instruments; only item codes and scoring rules are used here,
+# never question text. The social-needs screen is a fictional five-domain composite.
+
+instruments:
+  PHQ9:
+    label: Patient Health Questionnaire-9 (depression)
+    loinc_total: "44261-6"
+    kind: scored
+    items: [phq9_q1, phq9_q2, phq9_q3, phq9_q4, phq9_q5, phq9_q6, phq9_q7, phq9_q8, phq9_q9]
+    item_min: 0
+    item_max: 3
+    reported_total: phq9_total_reported
+    # A total is only computed when every item is answered: a blank item never becomes zero.
+    bands:
+      - {min: 0, max: 4, band: minimal}
+      - {min: 5, max: 9, band: mild}
+      - {min: 10, max: 14, band: moderate}
+      - {min: 15, max: 19, band: moderately_severe}
+      - {min: 20, max: 27, band: severe}
+    positive_at: 10
+    # Item 9 asks about thoughts of self-harm; any answer above 0 is flagged for same-day review.
+    safety_item: phq9_q9
+
+  GAD7:
+    label: Generalized Anxiety Disorder-7
+    loinc_total: "70274-6"
+    kind: scored
+    items: [gad7_q1, gad7_q2, gad7_q3, gad7_q4, gad7_q5, gad7_q6, gad7_q7]
+    item_min: 0
+    item_max: 3
+    reported_total: gad7_total_reported
+    bands:
+      - {min: 0, max: 4, band: minimal}
+      - {min: 5, max: 9, band: mild}
+      - {min: 10, max: 14, band: moderate}
+      - {min: 15, max: 21, band: severe}
+    positive_at: 10
+
+  SDOH5:
+    label: Social needs screen (five domains, fictional composite)
+    kind: domains
+    items: [sdoh_housing, sdoh_food, sdoh_transport, sdoh_utilities, sdoh_safety]
+    # Y = need identified, N = no need, D = declined to answer (counts as answered).
+    # Quoted on purpose: some YAML parsers (R's among them) read a bare Y or N as true or false.
+    item_values: ["Y", "N", "D"]
+    positive_value: "Y"

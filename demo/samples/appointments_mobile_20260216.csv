@@ -1,0 +1,9 @@
+visit_id,mrn,host_site,visit_date,visit_kind,visit_status
+MU401051,27570006,S03,2025-01-01,mobile,cancelled
+MU401179,38839884,S09,2025-01-01,mobile,cancelled
+MU402407,81393686,S01,2025-01-01,van,completed
+MU400457,26329421,S11,2025-01-02,van,completed
+MU400925,83004830,S10,2025-01-02,mobile,no show
+MU401772,74643779,S05,2025-01-02,mobile,completed
+MU400105,97924998,S06,2025-01-03,van,completed
+MU400622,43857951,S07,2025-01-03,van,completed

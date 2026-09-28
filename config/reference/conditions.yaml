@@ -1,0 +1,14 @@
+# Condition groups derived from problem-list ICD-10-CM codes (a public US government code set).
+groups:
+  diabetes_t2:
+    label: Type 2 diabetes
+    icd10_prefixes: [E11]
+  hypertension:
+    label: Hypertension
+    icd10_prefixes: [I10]
+  hyperlipidemia:
+    label: Hyperlipidemia
+    icd10_prefixes: [E78]
+  depression:
+    label: Depression
+    icd10_prefixes: [F32, F33]

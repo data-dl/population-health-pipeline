@@ -1,0 +1,19 @@
+issue_id,feed,rule_id,scope,title,status,first_seen,last_seen,current_count,peak_count,resolution,resolved_on,detail
+roster:ROS-005,roster,ROS-005,rows,Birth date is a real date,resolved,2026-02-16,2026-02-16,0,2,no rows held any more (released or superseded),2026-02-23,2 row(s) held for a steward
+appointments:APT-006,appointments,APT-006,rows,Status code is mapped,open,2026-02-16,2026-02-23,6,6,,,6 row(s) held; re-checked when the roster or reference data changes
+appointments:APT-007,appointments,APT-007,rows,Clinic exists,open,2026-02-16,2026-02-23,3,3,,,3 row(s) held for a steward
+appointments:APT-009,appointments,APT-009,rows,Patient is on the roster,open,2026-02-16,2026-02-23,3,15,,,3 row(s) held; re-checked when the roster or reference data changes
+labs:LAB-008,labs,LAB-008,rows,Result is a number or a censored number,open,2026-02-16,2026-02-23,5,5,,,5 row(s) held for a steward
+labs:LAB-010,labs,LAB-010,rows,Result is clinically plausible,open,2026-02-16,2026-02-23,4,4,,,4 row(s) held for a steward
+labs:LAB-011,labs,LAB-011,rows,Patient is on the roster,open,2026-02-16,2026-02-23,4,5,,,4 row(s) held; re-checked when the roster or reference data changes
+pharmacy:RX-006,pharmacy,RX-006,rows,Days supply is a whole number from 1 to 365,open,2026-02-16,2026-02-23,5,5,,,5 row(s) held for a steward
+pharmacy:RX-008,pharmacy,RX-008,rows,Drug is in a tracked class,open,2026-02-16,2026-02-23,3,3,,,3 row(s) held for a steward
+pharmacy:RX-010,pharmacy,RX-010,rows,Patient is on the roster,open,2026-02-16,2026-02-23,2,12,,,2 row(s) held; re-checked when the roster or reference data changes
+roster:ROS-008,roster,ROS-008,rows,Attributed clinic exists,open,2026-02-16,2026-02-23,3,3,,,3 row(s) held for a steward
+roster:ROS-010,roster,ROS-010,rows,One row per record number,open,2026-02-16,2026-02-23,4,4,,,4 row(s) held for a steward
+screenings:SCR-007,screenings,SCR-007,rows,Item responses are whole numbers within the instrument's range,open,2026-02-16,2026-02-23,6,6,,,6 row(s) held for a steward
+screenings:SCR-009,screenings,SCR-009,rows,Administration mode is recognised,open,2026-02-16,2026-02-23,4,4,,,4 row(s) held; re-checked when the roster or reference data changes
+screenings:SCR-010,screenings,SCR-010,rows,Patient is on the roster,open,2026-02-16,2026-02-23,3,15,,,3 row(s) held; re-checked when the roster or reference data changes
+appointments:APT-008,appointments,APT-008,rows,Completed or missed appointments are not in the future,open,2026-02-23,2026-02-23,2,2,,,2 row(s) held for a steward
+screenings:SCR-006,screenings,SCR-006,rows,Screening date is not after the extract,open,2026-02-23,2026-02-23,2,2,,,2 row(s) held for a steward
+screenings:SCR-011,screenings,SCR-011,rows,One version of each screening per file,open,2026-02-23,2026-02-23,2,2,,,2 row(s) held for a steward

@@ -1,0 +1,7 @@
+run_id,as_of,feed,source,published_table,event_column,last_arrival,last_extract,expected_next,delivery_status,latest_delivered_event,latest_published_event,days_behind,pipeline_status,overall,detail
+2026-03-03_01,2026-03-03,roster,ehr_roster,audit.loads (snapshot extract),extract_date,2026-03-02,2026-03-02,2026-03-09,ON_TIME,2026-03-02,2026-03-02,0,OK,OK,
+2026-03-03_01,2026-03-03,screenings,screening_platform,published.screening_events,screen_date,2026-03-02,2026-03-02,2026-03-09,ON_TIME,2026-02-27,2026-02-27,0,OK,OK,
+2026-03-03_01,2026-03-03,labs,reference_lab,published.lab_results,collected_date,2026-03-02,2026-03-02,2026-03-09,ON_TIME,2026-02-27,2026-02-27,0,OK,OK,
+2026-03-03_01,2026-03-03,appointments,clinic_scheduling,published.appointments,appt_date,2026-03-03,2026-03-02,2026-03-09,ON_TIME,2026-03-01,2026-02-27,2,OK,OK,
+2026-03-03_01,2026-03-03,appointments,mobile_unit,published.appointments,appt_date,2026-03-02,2026-03-02,2026-03-09,ON_TIME,2026-03-01,2026-02-27,2,OK,OK,
+2026-03-03_01,2026-03-03,pharmacy,pharmacy_claims,published.pharmacy_fills,fill_date,2026-02-23,2026-02-23,2026-03-02,LATE,2026-02-22,2026-02-22,0,OK,ACTION,"expected by 2026-03-02, 1 day(s) late"

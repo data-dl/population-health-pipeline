@@ -1,0 +1,149 @@
+feed: labs
+title: Laboratory results
+description: >-
+  Results for the tracked analytes (HbA1c and LDL cholesterol) from the reference laboratory.
+  The laboratory changed its file layout on the 2026-03-02 extract (change record CR-004):
+  renamed columns, explicit units, a specimen identifier, and HbA1c reported in IFCC mmol/mol by
+  part of its network. Both layouts map to one canonical table.
+steward: Clinical data steward
+supplier: Reference laboratory
+snapshot: false
+delivery:
+  cadence_days: 7
+  grace_days: 0
+  time_column: collected_date
+  freshness: {table: lab_results, column: collected_date}
+date_formats: ['%Y-%m-%d', '%m/%d/%Y']
+date_columns: [collected_date]
+natural_key: [lab_result_id]
+
+sources:
+  reference_lab:
+    file_pattern: '^labs_(?P<extract>[0-9]{8})(?:_r(?P<redelivery>[0-9]+))?\.csv$'
+    layouts:
+      - version: 1
+        columns:
+          OrderID: lab_result_id
+          MRN: patient_id
+          Collected: collected_date
+          LOINC: loinc_code
+          TestName: test_name
+          Result: result
+          RefRange: reference_range
+          AbnFlag: abnormal_flag
+      - version: 2
+        change_record: CR-004
+        columns:
+          accession_id: lab_result_id
+          patient_mrn: patient_id
+          collection_date: collected_date
+          loinc_code: loinc_code
+          test_description: test_name
+          result_value: result
+          result_units: units
+          reference_range: reference_range
+          abnormal_flag: abnormal_flag
+          specimen_id: specimen_id
+
+columns:
+  - {name: lab_result_id, type: VARCHAR, classification: operational, description: Order or accession number of the result.}
+  - {name: patient_id, type: VARCHAR, classification: direct_identifier, description: Medical record number.}
+  - {name: collected_date, type: DATE, classification: direct_identifier, description: Specimen collection date.}
+  - {name: loinc_code, type: VARCHAR, classification: reference, description: LOINC code as sent.}
+  - {name: analyte, type: VARCHAR, classification: reference, description: "Tracked analyte: HBA1C or LDL."}
+  - {name: result_raw, type: VARCHAR, classification: clinical, description: Result text exactly as sent.}
+  - {name: result_value, type: "DECIMAL(10,2)", classification: clinical, description: "Numeric result in the unit sent; censored results (<4.0) keep the bound."}
+  - {name: censor, type: VARCHAR, classification: clinical, description: "'<' or '>' when the laboratory reported a bound rather than a value."}
+  - {name: units, type: VARCHAR, classification: clinical, description: "Unit as sent (v2) or implied by the code (v1)."}
+  - {name: value_std, type: "DECIMAL(10,1)", classification: clinical, description: "Result in the standard unit (HbA1c %, LDL mg/dL)."}
+  - {name: specimen_id, type: VARCHAR, classification: operational, description: Specimen identifier (layout v2 only).}
+
+rules:
+  - id: LAB-001
+    type: volume
+    title: Delivery volume is in the usual range
+    dimension: completeness
+    action: block
+    min_ratio: 0.25
+    min_baseline_rows: 40
+  - id: LAB-002
+    type: date_format
+    title: Dates use the agreed format
+    dimension: conformity
+    action: warn
+  - id: LAB-003
+    type: repair
+    title: Medical record numbers keep their leading zeros
+    dimension: conformity
+    action: repair
+    when: "regexp_full_match(patient_id, '[0-9]{1,7}')"
+    set: {patient_id: "lpad(patient_id, 8, '0')"}
+    message: Numeric record number shorter than eight digits (leading zeros lost in a spreadsheet); zero-padded.
+  - id: LAB-004
+    type: required
+    title: Result, patient, date, code and value are present
+    dimension: completeness
+    action: quarantine
+    columns: [lab_result_id, patient_id, collected_date_raw, loinc_code, result_raw]
+  - id: LAB-005
+    type: parse
+    title: Collection date is a real date
+    dimension: validity
+    action: quarantine
+    column: collected_date
+  - id: LAB-006
+    type: not_future
+    title: Collection date is not after the extract
+    dimension: validity
+    action: quarantine
+    column: collected_date
+  - id: LAB-007
+    type: in_reference
+    title: Test code is one the contract covers
+    dimension: conformity
+    action: quarantine
+    column: loinc_code
+    reference: loinc_code
+  - id: LAB-008
+    type: expression
+    title: Result is a number or a censored number
+    dimension: validity
+    action: quarantine
+    fail_when: "result_raw is not null and result_value is null"
+    detail: result_raw
+    message: Non-reportable result (for example QNS or CANCELLED); held for the steward.
+  - id: LAB-009
+    type: expression
+    title: Unit is valid for the analyte
+    dimension: conformity
+    action: quarantine
+    fail_when: "analyte is not null and not _unit_known"
+    detail: units
+  - id: LAB-010
+    type: expression
+    title: Result is clinically plausible
+    dimension: validity
+    action: quarantine
+    fail_when: "value_std is not null and (value_std < _plausible_min or value_std > _plausible_max)"
+    detail: "analyte || ' ' || result_raw || coalesce(' ' || units, '')"
+    message: Outside the plausible range for the analyte in its standard unit - often a result sent in the wrong unit. Never converted by guesswork.
+  - id: LAB-011
+    type: on_roster
+    title: Patient is on the roster
+    dimension: integrity
+    action: quarantine
+    retryable: true
+    column: patient_id
+  - id: LAB-012
+    type: key_conflict
+    title: One version of each result per file
+    dimension: uniqueness
+    action: quarantine
+  - id: LAB-013
+    type: closed_period
+    title: Late rows for a closed measurement year are announced
+    dimension: timeliness
+    action: warn
+    column: collected_date
+
+published: [lab_results]

@@ -1,0 +1,13 @@
+# Terms that must never appear in this repository (case-insensitive). The list is generic on purpose:
+# it catches unsanitised residue, not any particular source. A private, never-committed list can be
+# checked as well by pointing POPHEALTH_PRIVATE_BLOCKLIST at it (see tests/test_privacy.py).
+confidential
+internal use only
+proprietary
+do not distribute
+sharepoint
+intranet
+fileserver
+TODO: real
+real path
+production path

@@ -1,0 +1,7 @@
+feed,name,rows_raw,rows_malformed,rows_staged,rows_passed,rows_quarantined,rows_inserted,rows_updated,rows_unchanged,rows_deduped,rows_removed,raw = staged + malformed,staged = passed + quarantined,passed = inserted + updated + unchanged + deduped
+roster,roster_20260223.csv,5002,0,5002,4995,7,14,55,4926,0,0,True,True,True
+screenings,screenings_20260223.csv,67,0,67,63,4,53,0,10,0,0,True,True,True
+labs,labs_20260223.csv,55,0,55,53,2,50,3,0,0,0,True,True,True
+appointments,appointments_main_20260223.csv,418,0,418,416,2,216,200,0,0,0,True,True,True
+appointments,appointments_mobile_20260223.csv,45,0,45,45,0,27,18,0,0,0,True,True,True
+pharmacy,rx_claims_20260223.csv,290,0,290,290,0,290,0,0,0,0,True,True,True

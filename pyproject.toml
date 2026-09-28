@@ -1,0 +1,44 @@
+[project]
+name = "pophealth"
+version = "0.1.0"
+description = "Population-health data pipeline: five clinical feeds in; a validated, audited warehouse, dbt quality measures, longitudinal patient documents and a de-identified demo copy out. Synthetic data, graded against an answer key in CI."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.1",
+    "pyyaml>=6",
+    "dbt-duckdb>=1.8",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+pophealth = "pophealth.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pophealth*", "synth*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: runs the whole multi-delivery scenario",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]

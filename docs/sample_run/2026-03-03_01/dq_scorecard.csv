@@ -1,0 +1,13 @@
+feed,load_id,rule_id,rule_type,action,dimension,rows_evaluated,rows_failed,outcome,detail
+appointments,appointments_main_20260302_r1.248a65c0,APT-001,volume,block,completeness,387,0,pass,387 rows against a usual 418 (0.93x)
+appointments,appointments_main_20260302_r1.248a65c0,APT-002,date_format,warn,conformity,387,0,pass,
+appointments,appointments_main_20260302_r1.248a65c0,APT-003,repair,repair,conformity,387,0,pass,
+appointments,appointments_main_20260302_r1.248a65c0,APT-004,required,quarantine,completeness,387,0,pass,
+appointments,appointments_main_20260302_r1.248a65c0,APT-005,parse,quarantine,validity,387,0,pass,
+appointments,appointments_main_20260302_r1.248a65c0,APT-006,mapped,quarantine,conformity,387,0,pass,
+appointments,appointments_main_20260302_r1.248a65c0,APT-007,in_reference,quarantine,integrity,387,0,pass,
+appointments,appointments_main_20260302_r1.248a65c0,APT-008,expression,quarantine,validity,387,0,pass,
+appointments,appointments_main_20260302_r1.248a65c0,APT-009,on_roster,quarantine,integrity,387,0,pass,
+appointments,appointments_main_20260302_r1.248a65c0,APT-010,key_conflict,quarantine,uniqueness,387,0,pass,
+appointments,appointments_main_20260302_r1.248a65c0,APT-011,mapped,warn,conformity,387,0,pass,
+appointments,appointments_main_20260302_r1.248a65c0,APT-012,closed_period,warn,timeliness,387,0,pass,

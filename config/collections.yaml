@@ -1,0 +1,29 @@
+# Document collections built for the care-management application. Each collection is built on its
+# own, by its own builder, so one can be rebuilt or debugged without the others
+# (`pophealth documents --collection clinics`), and patient documents are built in parallel,
+# one clinic per worker. `reads` is the collection's lineage: the tables its builder queries.
+
+collections:
+  patients:
+    description: >-
+      One longitudinal document per patient: demographics, care team, conditions, screening and lab
+      history with the latest result, medication adherence, appointment pattern and open care gaps.
+    key: patient_id
+    partition_by: site_id
+    builder: pophealth.documents.builders:build_patients
+    reads: [published.patients, published.patient_conditions, published.screening_events, published.lab_results,
+            dbt_intermediate.int_pdc, marts.appointment_windows, marts.care_gaps]
+
+  clinics:
+    description: One document per clinic - panel size, measure rates, open gaps by type, care managers.
+    key: site_id
+    builder: pophealth.documents.builders:build_clinics
+    reads: [dbt_intermediate.int_patient_facts, marts.measure_summary, marts.care_gaps, published.patients]
+
+  worklists:
+    # Not partitioned by clinic: a care manager keeps patients who move to another clinic, so one
+    # worklist can span clinics, and a per-clinic build would split it into two documents.
+    description: One document per care manager - the patients assigned to them with open care gaps.
+    key: care_manager
+    builder: pophealth.documents.builders:build_worklists
+    reads: [marts.care_gaps]

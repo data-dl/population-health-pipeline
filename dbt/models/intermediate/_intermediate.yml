@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: int_patient_facts
+    description: One row per patient with attribution, equity strata, age at year end, activity and conditions.
+    columns:
+      - name: patient_id
+        tests: [unique, not_null]
+      - name: age_band
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["0-17", "18-39", "40-64", "65+"]
+  - name: int_pdc
+    description: >-
+      Proportion of days covered per patient and drug class, measurement year. See the model's header for the
+      carry-forward rule and its closed form.
+    columns:
+      - name: pdc
+        tests:
+          - value_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+      - name: days_covered
+        tests: [not_null]

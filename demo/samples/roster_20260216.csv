@@ -1,0 +1,9 @@
+MRN,FIRST_NAME,LAST_NAME,DOB,SEX,RACE,ETHNICITY,PREF_LANGUAGE,ADDRESS1,CITY,ZIP,PHONE,EMAIL,PAYER_TYPE,SITE_CODE,PCP,CARE_MANAGER,PROBLEM_LIST,REG_DATE
+01042824,Terry,Wallace,1952-09-16,M,Black or African American,Hispanic or Latino,es,898 Birch Ct,Easton,70385,(555) 855-2105,,GOVERNMENT,S05,Megan Miller,Alexis Moreno,I10;F32.9,2023-06-22
+01075093,Elizabeth,Torres,1995-01-26,F,Asian,Not Hispanic or Latino,ENG,6842 Birch St,Easton,70379,555-426-0568,elizabeth.torres10@example.org,GOVT,S06,Billy Hall,Ana Flores,,2008-12-11
+01097450,Omar,Stevens,1970-09-13,M,Black or African American,Not Hispanic or Latino,English,4720 Ridge Rd,Easton,70344,5553087775,omar.stevens62@example.org,MARKETPLACE,S12,Priya Ward,Linda Ivanova,,2024-01-18
+01103212,Cynthia,Harris,1961-11-03,F,White,Not Hispanic or Latino,ENG,1480 River Ln,Easton,70392,(555) 319-5332,cynthia.harris49@example.org,GOVT,S12,Priya Ward,Jennifer Okafor,I10;E78.5,2019-12-14
+01104301,Frances,Moreno,2009-03-29,F,White,Not Hispanic or Latino,ENG,8054 Hill Ct,Riverton,70205,555-478-0241,,GOVT,S03,Arthur Richardson,Scott Jordan,,2025-02-25
+01120280,Wayne,Thompson,2008-06-14,M,White,Hispanic or Latino,English,3150 Walnut St,Northfield,70123,(555) 388-3246,,Public,S02,Kathleen Myers,Shirley Sullivan,,2018-11-21
+01120772,Ralph,Smith,2002-10-01,M,,Hispanic or Latino,English,7964 Hill Pl,Southport,70478,(555) 211-4830,ralph.smith31@example.org,Public,S11,Aisha Graham,Jason Tran,,2018-06-28
+01169926,Beverly,Garcia,1987-05-29,F,Black or African American,Not Hispanic or Latino,ENG,6668 Church Ln,Riverton,70216,5555752295,,GOVT,S04,Beverly Cook,Judith Gray,,2016-02-21

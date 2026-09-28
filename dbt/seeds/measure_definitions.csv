@@ -1,0 +1,10 @@
+measure_id,measure_name,direction,family,denominator,numerator
+DM_A1C_TESTED,Diabetes: HbA1c tested,higher_better,diabetes,"Patients 18-75 at year end with type 2 diabetes on the problem list and a completed visit in the year","At least one HbA1c result collected in the year"
+DM_A1C_CONTROLLED,Diabetes: HbA1c below 8.0%,higher_better,diabetes,"As DM_A1C_TESTED","Most recent HbA1c in the year is below 8.0%"
+DM_A1C_POOR,Diabetes: HbA1c above 9.0% or not tested,lower_better,diabetes,"As DM_A1C_TESTED","Most recent HbA1c in the year is above 9.0%, or no HbA1c in the year (inverse measure)"
+DEP_SCREEN,Depression screening,higher_better,behavioral_health,"Patients 12 or older at year end with a completed visit in the year","A complete PHQ-9 (every item answered) in the year"
+DEP_FOLLOWUP,Follow-up after a positive depression screen,higher_better,behavioral_health,"Patients whose first complete PHQ-9 of 10 or more in 1 January - 1 December falls in the year","A completed visit or another complete PHQ-9 within 30 days after that screen"
+PDC_DIABETES,Adherence: diabetes medications,higher_better,adherence,"Patients with two or more fills of a non-insulin diabetes medication on different days in the year","Proportion of days covered from the first fill to year end is 80% or more"
+PDC_RAS,Adherence: RAS antagonists,higher_better,adherence,"Patients with two or more fills of a RAS antagonist on different days in the year","Proportion of days covered from the first fill to year end is 80% or more"
+PDC_STATIN,Adherence: statins,higher_better,adherence,"Patients with two or more fills of a statin on different days in the year","Proportion of days covered from the first fill to year end is 80% or more"
+SDOH_SCREEN,Social needs screening,higher_better,social_needs,"Patients 18 or older at year end with a completed visit in the year","A social-needs screen with all five domains answered in the year"

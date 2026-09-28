@@ -1,0 +1,126 @@
+feed: pharmacy
+title: Pharmacy claims
+description: >-
+  Paid and reversed pharmacy claims for the tracked drug classes. A reversal arrives as a second
+  row with the same claim number and status R, sometimes a week later; fills are netted before
+  adherence is calculated. Claims adjudicate late, so rows for a closed measurement year keep
+  arriving after it closes.
+steward: Pharmacy data steward
+supplier: Pharmacy benefit claims feed
+snapshot: false
+delivery:
+  cadence_days: 7
+  grace_days: 0
+  time_column: fill_date
+  freshness: {table: pharmacy_fills, column: fill_date}
+date_formats: ['%Y-%m-%d', '%m/%d/%Y']
+date_columns: [fill_date, adjudicated_date]
+natural_key: [claim_id, claim_status]
+
+sources:
+  pharmacy_claims:
+    file_pattern: '^rx_claims_(?P<extract>[0-9]{8})(?:_r(?P<redelivery>[0-9]+))?\.csv$'
+    layouts:
+      - version: 1
+        columns:
+          claim_id: claim_id
+          member_mrn: patient_id
+          fill_date: fill_date
+          drug_name: drug_name
+          strength: strength
+          days_supply: days_supply
+          quantity: quantity
+          claim_status: claim_status
+          adjudicated_date: adjudicated_date
+
+columns:
+  - {name: claim_id, type: VARCHAR, classification: operational, description: Claim number.}
+  - {name: patient_id, type: VARCHAR, classification: direct_identifier, description: Medical record number.}
+  - {name: fill_date, type: DATE, classification: direct_identifier, description: Date dispensed.}
+  - {name: drug_name, type: VARCHAR, classification: clinical, description: Generic drug name (lower case).}
+  - {name: drug_class, type: VARCHAR, classification: clinical, description: "diabetes_oral, ras_antagonist or statin."}
+  - {name: strength, type: VARCHAR, classification: clinical, description: Strength as sent.}
+  - {name: days_supply, type: INTEGER, classification: clinical, description: "Days the fill covers, 1-365."}
+  - {name: quantity, type: "DECIMAL(10,2)", classification: clinical, description: Units dispensed.}
+  - {name: claim_status, type: VARCHAR, classification: operational, description: "P (paid) or R (reversed)."}
+  - {name: adjudicated_date, type: DATE, classification: operational, description: Date the claim was adjudicated.}
+
+rules:
+  - id: RX-001
+    type: volume
+    title: Delivery volume is in the usual range
+    dimension: completeness
+    action: block
+    min_ratio: 0.25
+    min_baseline_rows: 40
+  - id: RX-002
+    type: date_format
+    title: Dates use the agreed format
+    dimension: conformity
+    action: warn
+  - id: RX-003
+    type: repair
+    title: Medical record numbers keep their leading zeros
+    dimension: conformity
+    action: repair
+    when: "regexp_full_match(patient_id, '[0-9]{1,7}')"
+    set: {patient_id: "lpad(patient_id, 8, '0')"}
+  - id: RX-004
+    type: required
+    title: Claim, patient, fill date, drug, supply and status are present
+    dimension: completeness
+    action: quarantine
+    columns: [claim_id, patient_id, fill_date_raw, drug_name, days_supply_raw, claim_status_raw]
+  - id: RX-005
+    type: parse
+    title: Fill date is a real date
+    dimension: validity
+    action: quarantine
+    column: fill_date
+  - id: RX-006
+    type: expression
+    title: Days supply is a whole number from 1 to 365
+    dimension: validity
+    action: quarantine
+    fail_when: "days_supply_raw is not null and (days_supply is null or days_supply < 1 or days_supply > 365)"
+    detail: days_supply_raw
+  - id: RX-007
+    type: mapped
+    title: Claim status is P or R
+    dimension: validity
+    action: quarantine
+    column: claim_status
+  - id: RX-008
+    type: in_reference
+    title: Drug is in a tracked class
+    dimension: conformity
+    action: quarantine
+    column: drug_name
+    reference: drug_name
+  - id: RX-009
+    type: not_future
+    title: Fill date is not after the extract
+    dimension: validity
+    action: quarantine
+    column: fill_date
+  - id: RX-010
+    type: on_roster
+    title: Patient is on the roster
+    dimension: integrity
+    action: quarantine
+    retryable: true
+    column: patient_id
+  - id: RX-011
+    type: key_conflict
+    title: One version of each claim row per file
+    dimension: uniqueness
+    action: quarantine
+  - id: RX-012
+    type: closed_period
+    title: Late claims for a closed measurement year are announced
+    dimension: timeliness
+    action: warn
+    column: fill_date
+    message: Late-adjudicated claims restate adherence for the closed year.
+
+published: [pharmacy_fills, pharmacy_claims]

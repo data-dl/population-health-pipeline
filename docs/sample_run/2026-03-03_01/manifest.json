@@ -1,0 +1,28 @@
+{
+ "run_id": "2026-03-03_01",
+ "as_of": "2026-03-03",
+ "pophealth": "0.1.0",
+ "config_hash": "fbaef3eda911e47b",
+ "dbt_project_hash": "3d708a2975e89843",
+ "files_registered": [
+  {
+   "name": "appointments_main_20260302_r1.csv",
+   "feed": "appointments",
+   "sha256": "248a65c09f77d6573934c5eb7aa3811b6b6fc959d96667681f403b8c802bf2e8",
+   "status": "loaded"
+  }
+ ],
+ "published": [
+  {
+   "feed": "appointments",
+   "table": "appointments",
+   "rows": 16063,
+   "content_hash": "b50ac4af4fc8f33a363e4e95e86865a4",
+   "changed": true
+  }
+ ],
+ "gates": {
+  "appointments": "PUBLISH"
+ },
+ "deidentification_passed": true
+}

@@ -1,0 +1,218 @@
+measure_id,stratifier,group_value,denominator,numerator,rate,relative_rate,share_of_denominator,share_of_numerator,suppressed,suppression_reason
+DEP_FOLLOWUP,age_band,0-17,,,,,,,true,small cell
+DEP_FOLLOWUP,age_band,18-39,127,92,0.7244,1.051,0.312,0.3228,false,
+DEP_FOLLOWUP,age_band,40-64,156,110,0.7051,1.011,0.3833,0.386,false,
+DEP_FOLLOWUP,age_band,65+,,,,,,,true,complementary
+DEP_FOLLOWUP,language_group,English,293,211,0.7201,1.109,0.7199,0.7404,false,
+DEP_FOLLOWUP,language_group,Other,,,,,,,true,complementary
+DEP_FOLLOWUP,language_group,Spanish,64,42,0.6563,0.926,0.1572,0.1474,false,
+DEP_FOLLOWUP,language_group,Unknown,,,,,,,true,small cell
+DEP_FOLLOWUP,payer_type,commercial,136,90,0.6618,0.92,0.3342,0.3158,false,
+DEP_FOLLOWUP,payer_type,government,190,137,0.7211,1.057,0.4668,0.4807,false,
+DEP_FOLLOWUP,payer_type,marketplace,42,30,0.7143,1.022,0.1032,0.1053,false,
+DEP_FOLLOWUP,payer_type,self_pay,39,28,0.7179,1.028,0.0958,0.0982,false,
+DEP_FOLLOWUP,race_ethnicity,American Indian or Alaska Native,,,,,,,true,small cell
+DEP_FOLLOWUP,race_ethnicity,Asian,51,38,0.7451,1.074,0.1253,0.1333,false,
+DEP_FOLLOWUP,race_ethnicity,Black or African American,84,62,0.7381,1.069,0.2064,0.2175,false,
+DEP_FOLLOWUP,race_ethnicity,Hispanic or Latino,104,75,0.7212,1.041,0.2555,0.2632,false,
+DEP_FOLLOWUP,race_ethnicity,Middle Eastern or North African,,,,,,,true,small cell
+DEP_FOLLOWUP,race_ethnicity,Multiracial,,,,,,,true,small cell
+DEP_FOLLOWUP,race_ethnicity,Native Hawaiian or Pacific Islander,,,,,,,true,small cell
+DEP_FOLLOWUP,race_ethnicity,Unknown,,,,,,,true,small cell
+DEP_FOLLOWUP,race_ethnicity,White,138,89,0.6449,0.885,0.3391,0.3123,false,
+DEP_FOLLOWUP,sex,F,208,142,0.6827,0.95,0.5111,0.4982,false,
+DEP_FOLLOWUP,sex,M,195,141,0.7231,1.065,0.4791,0.4947,false,
+DEP_FOLLOWUP,sex,U,,,,,,,true,small cell
+DEP_FOLLOWUP,sex,X,,,,,,,true,small cell
+DEP_SCREEN,age_band,0-17,231,169,0.7316,0.985,0.0656,0.0647,false,
+DEP_SCREEN,age_band,18-39,1157,877,0.758,1.032,0.3287,0.3358,false,
+DEP_SCREEN,age_band,40-64,1393,1028,0.738,0.991,0.3957,0.3936,false,
+DEP_SCREEN,age_band,65+,739,538,0.728,0.976,0.2099,0.206,false,
+DEP_SCREEN,language_group,English,2391,1874,0.7838,1.199,0.6793,0.7175,false,
+DEP_SCREEN,language_group,Other,,,,,,,true,complementary
+DEP_SCREEN,language_group,Spanish,706,465,0.6586,0.863,0.2006,0.178,false,
+DEP_SCREEN,language_group,Unknown,,,,,,,true,small cell
+DEP_SCREEN,payer_type,commercial,1166,861,0.7384,0.993,0.3313,0.3296,false,
+DEP_SCREEN,payer_type,government,1692,1246,0.7364,0.985,0.4807,0.477,false,
+DEP_SCREEN,payer_type,marketplace,345,260,0.7536,1.017,0.098,0.0995,false,
+DEP_SCREEN,payer_type,self_pay,317,245,0.7729,1.046,0.0901,0.0938,false,
+DEP_SCREEN,race_ethnicity,American Indian or Alaska Native,,,,,,,true,small cell
+DEP_SCREEN,race_ethnicity,Asian,355,267,0.7521,1.015,0.1009,0.1022,false,
+DEP_SCREEN,race_ethnicity,Black or African American,727,526,0.7235,0.969,0.2065,0.2014,false,
+DEP_SCREEN,race_ethnicity,Hispanic or Latino,974,724,0.7433,1.002,0.2767,0.2772,false,
+DEP_SCREEN,race_ethnicity,Middle Eastern or North African,65,46,0.7077,0.953,0.0185,0.0176,false,
+DEP_SCREEN,race_ethnicity,Multiracial,107,82,0.7664,1.034,0.0304,0.0314,false,
+DEP_SCREEN,race_ethnicity,Native Hawaiian or Pacific Islander,,,,,,,true,small cell
+DEP_SCREEN,race_ethnicity,Unknown,127,102,0.8031,1.086,0.0361,0.0391,false,
+DEP_SCREEN,race_ethnicity,White,1116,828,0.7419,1.0,0.317,0.317,false,
+DEP_SCREEN,sex,F,1785,1321,0.7401,0.995,0.5071,0.5057,false,
+DEP_SCREEN,sex,M,1696,1260,0.7429,1.002,0.4818,0.4824,false,
+DEP_SCREEN,sex,U,,,,,,,true,small cell
+DEP_SCREEN,sex,X,,,,,,,true,small cell
+DM_A1C_CONTROLLED,age_band,18-39,44,18,0.4091,0.875,0.1433,0.1277,false,
+DM_A1C_CONTROLLED,age_band,40-64,191,85,0.445,0.922,0.6221,0.6028,false,
+DM_A1C_CONTROLLED,age_band,65+,72,38,0.5278,1.204,0.2345,0.2695,false,
+DM_A1C_CONTROLLED,language_group,English,222,105,0.473,1.117,0.7231,0.7447,false,
+DM_A1C_CONTROLLED,language_group,Other,,,,,,,true,small cell
+DM_A1C_CONTROLLED,language_group,Spanish,56,26,0.4643,1.013,0.1824,0.1844,false,
+DM_A1C_CONTROLLED,language_group,Unknown,,,,,,,true,small cell
+DM_A1C_CONTROLLED,payer_type,commercial,113,53,0.469,1.034,0.3681,0.3759,false,
+DM_A1C_CONTROLLED,payer_type,government,147,67,0.4558,0.985,0.4788,0.4752,false,
+DM_A1C_CONTROLLED,payer_type,marketplace,,,,,,,true,small cell
+DM_A1C_CONTROLLED,payer_type,self_pay,,,,,,,true,small cell
+DM_A1C_CONTROLLED,race_ethnicity,American Indian or Alaska Native,,,,,,,true,small cell
+DM_A1C_CONTROLLED,race_ethnicity,Asian,39,13,0.3333,0.698,0.127,0.0922,false,
+DM_A1C_CONTROLLED,race_ethnicity,Black or African American,62,28,0.4516,0.979,0.202,0.1986,false,
+DM_A1C_CONTROLLED,race_ethnicity,Hispanic or Latino,76,39,0.5132,1.162,0.2476,0.2766,false,
+DM_A1C_CONTROLLED,race_ethnicity,Middle Eastern or North African,,,,,,,true,small cell
+DM_A1C_CONTROLLED,race_ethnicity,Multiracial,,,,,,,true,small cell
+DM_A1C_CONTROLLED,race_ethnicity,Native Hawaiian or Pacific Islander,,,,,,,true,small cell
+DM_A1C_CONTROLLED,race_ethnicity,Unknown,,,,,,,true,small cell
+DM_A1C_CONTROLLED,race_ethnicity,White,102,46,0.451,0.973,0.3322,0.3262,false,
+DM_A1C_CONTROLLED,sex,F,138,69,0.5,1.174,0.4495,0.4894,false,
+DM_A1C_CONTROLLED,sex,M,166,71,0.4277,0.862,0.5407,0.5035,false,
+DM_A1C_CONTROLLED,sex,U,,,,,,,true,small cell
+DM_A1C_CONTROLLED,sex,X,,,,,,,true,small cell
+DM_A1C_POOR,age_band,18-39,44,18,0.4091,1.121,0.1433,0.1579,false,
+DM_A1C_POOR,age_band,40-64,191,74,0.3874,1.124,0.6221,0.6491,false,
+DM_A1C_POOR,age_band,65+,72,22,0.3056,0.78,0.2345,0.193,false,
+DM_A1C_POOR,language_group,English,222,80,0.3604,0.901,0.7231,0.7018,false,
+DM_A1C_POOR,language_group,Other,,,,,,,true,small cell
+DM_A1C_POOR,language_group,Spanish,56,23,0.4107,1.133,0.1824,0.2018,false,
+DM_A1C_POOR,language_group,Unknown,,,,,,,true,small cell
+DM_A1C_POOR,payer_type,commercial,113,40,0.354,0.928,0.3681,0.3509,false,
+DM_A1C_POOR,payer_type,government,147,57,0.3878,1.088,0.4788,0.5,false,
+DM_A1C_POOR,payer_type,marketplace,,,,,,,true,complementary
+DM_A1C_POOR,payer_type,self_pay,,,,,,,true,small cell
+DM_A1C_POOR,race_ethnicity,American Indian or Alaska Native,,,,,,,true,small cell
+DM_A1C_POOR,race_ethnicity,Asian,39,17,0.4359,1.204,0.127,0.1491,false,
+DM_A1C_POOR,race_ethnicity,Black or African American,62,26,0.4194,1.168,0.202,0.2281,false,
+DM_A1C_POOR,race_ethnicity,Hispanic or Latino,76,24,0.3158,0.811,0.2476,0.2105,false,
+DM_A1C_POOR,race_ethnicity,Middle Eastern or North African,,,,,,,true,small cell
+DM_A1C_POOR,race_ethnicity,Multiracial,,,,,,,true,small cell
+DM_A1C_POOR,race_ethnicity,Native Hawaiian or Pacific Islander,,,,,,,true,small cell
+DM_A1C_POOR,race_ethnicity,Unknown,,,,,,,true,small cell
+DM_A1C_POOR,race_ethnicity,White,102,37,0.3627,0.966,0.3322,0.3246,false,
+DM_A1C_POOR,sex,F,138,44,0.3188,0.77,0.4495,0.386,false,
+DM_A1C_POOR,sex,M,166,69,0.4157,1.302,0.5407,0.6053,false,
+DM_A1C_POOR,sex,U,,,,,,,true,small cell
+DM_A1C_POOR,sex,X,,,,,,,true,small cell
+DM_A1C_TESTED,age_band,18-39,,,,,,,true,small cell
+DM_A1C_TESTED,age_band,40-64,191,169,0.8848,0.987,0.6221,0.619,false,
+DM_A1C_TESTED,age_band,65+,,,,,,,true,small cell
+DM_A1C_TESTED,language_group,English,222,195,0.8784,0.957,0.7231,0.7143,false,
+DM_A1C_TESTED,language_group,Other,,,,,,,true,small cell
+DM_A1C_TESTED,language_group,Spanish,,,,,,,true,small cell
+DM_A1C_TESTED,language_group,Unknown,,,,,,,true,small cell
+DM_A1C_TESTED,payer_type,commercial,,,,,,,true,small cell
+DM_A1C_TESTED,payer_type,government,147,127,0.8639,0.947,0.4788,0.4652,false,
+DM_A1C_TESTED,payer_type,marketplace,,,,,,,true,small cell
+DM_A1C_TESTED,payer_type,self_pay,,,,,,,true,small cell
+DM_A1C_TESTED,race_ethnicity,American Indian or Alaska Native,,,,,,,true,small cell
+DM_A1C_TESTED,race_ethnicity,Asian,,,,,,,true,small cell
+DM_A1C_TESTED,race_ethnicity,Black or African American,,,,,,,true,small cell
+DM_A1C_TESTED,race_ethnicity,Hispanic or Latino,,,,,,,true,small cell
+DM_A1C_TESTED,race_ethnicity,Middle Eastern or North African,,,,,,,true,small cell
+DM_A1C_TESTED,race_ethnicity,Multiracial,,,,,,,true,small cell
+DM_A1C_TESTED,race_ethnicity,Native Hawaiian or Pacific Islander,,,,,,,true,small cell
+DM_A1C_TESTED,race_ethnicity,Unknown,,,,,,,true,small cell
+DM_A1C_TESTED,race_ethnicity,White,102,86,0.8431,0.924,0.3322,0.315,false,
+DM_A1C_TESTED,sex,F,138,127,0.9203,1.065,0.4495,0.4652,false,
+DM_A1C_TESTED,sex,M,166,143,0.8614,0.934,0.5407,0.5238,false,
+DM_A1C_TESTED,sex,U,,,,,,,true,small cell
+DM_A1C_TESTED,sex,X,,,,,,,true,small cell
+PDC_DIABETES,age_band,18-39,36,23,0.6389,1.013,0.1115,0.1127,false,
+PDC_DIABETES,age_band,40-64,150,95,0.6333,1.005,0.4644,0.4657,false,
+PDC_DIABETES,age_band,65+,137,86,0.6277,0.989,0.4241,0.4216,false,
+PDC_DIABETES,language_group,English,231,151,0.6537,1.135,0.7152,0.7402,false,
+PDC_DIABETES,language_group,Other,,,,,,,true,small cell
+PDC_DIABETES,language_group,Spanish,62,33,0.5323,0.812,0.192,0.1618,false,
+PDC_DIABETES,language_group,Unknown,,,,,,,true,small cell
+PDC_DIABETES,payer_type,commercial,120,80,0.6667,1.091,0.3715,0.3922,false,
+PDC_DIABETES,payer_type,government,156,91,0.5833,0.862,0.483,0.4461,false,
+PDC_DIABETES,payer_type,marketplace,,,,,,,true,small cell
+PDC_DIABETES,payer_type,self_pay,,,,,,,true,small cell
+PDC_DIABETES,race_ethnicity,American Indian or Alaska Native,,,,,,,true,small cell
+PDC_DIABETES,race_ethnicity,Asian,40,25,0.625,0.988,0.1238,0.1225,false,
+PDC_DIABETES,race_ethnicity,Black or African American,63,39,0.619,0.975,0.195,0.1912,false,
+PDC_DIABETES,race_ethnicity,Hispanic or Latino,87,58,0.6667,1.078,0.2693,0.2843,false,
+PDC_DIABETES,race_ethnicity,Middle Eastern or North African,,,,,,,true,small cell
+PDC_DIABETES,race_ethnicity,Multiracial,,,,,,,true,small cell
+PDC_DIABETES,race_ethnicity,Native Hawaiian or Pacific Islander,,,,,,,true,small cell
+PDC_DIABETES,race_ethnicity,Unknown,,,,,,,true,small cell
+PDC_DIABETES,race_ethnicity,White,98,58,0.5918,0.912,0.3034,0.2843,false,
+PDC_DIABETES,sex,F,153,105,0.6863,1.178,0.4737,0.5147,false,
+PDC_DIABETES,sex,M,167,99,0.5928,0.881,0.517,0.4853,false,
+PDC_DIABETES,sex,U,,,,,,,true,small cell
+PDC_DIABETES,sex,X,,,,,,,true,small cell
+PDC_RAS,age_band,18-39,66,46,0.697,1.121,0.0957,0.106,false,
+PDC_RAS,age_band,40-64,319,200,0.627,0.994,0.4623,0.4608,false,
+PDC_RAS,age_band,65+,305,188,0.6164,0.965,0.442,0.4332,false,
+PDC_RAS,language_group,English,468,287,0.6132,0.926,0.6783,0.6613,false,
+PDC_RAS,language_group,Other,,,,,,,true,complementary
+PDC_RAS,language_group,Spanish,140,90,0.6429,1.028,0.2029,0.2074,false,
+PDC_RAS,language_group,Unknown,,,,,,,true,small cell
+PDC_RAS,payer_type,commercial,224,134,0.5982,0.929,0.3246,0.3088,false,
+PDC_RAS,payer_type,government,341,212,0.6217,0.977,0.4942,0.4885,false,
+PDC_RAS,payer_type,marketplace,64,47,0.7344,1.188,0.0928,0.1083,false,
+PDC_RAS,payer_type,self_pay,61,41,0.6721,1.076,0.0884,0.0945,false,
+PDC_RAS,race_ethnicity,American Indian or Alaska Native,,,,,,,true,small cell
+PDC_RAS,race_ethnicity,Asian,76,50,0.6579,1.052,0.1101,0.1152,false,
+PDC_RAS,race_ethnicity,Black or African American,164,94,0.5732,0.887,0.2377,0.2166,false,
+PDC_RAS,race_ethnicity,Hispanic or Latino,169,110,0.6509,1.047,0.2449,0.2535,false,
+PDC_RAS,race_ethnicity,Middle Eastern or North African,,,,,,,true,small cell
+PDC_RAS,race_ethnicity,Multiracial,30,17,0.5667,0.897,0.0435,0.0392,false,
+PDC_RAS,race_ethnicity,Native Hawaiian or Pacific Islander,,,,,,,true,small cell
+PDC_RAS,race_ethnicity,Unknown,,,,,,,true,small cell
+PDC_RAS,race_ethnicity,White,209,138,0.6603,1.073,0.3029,0.318,false,
+PDC_RAS,sex,F,333,209,0.6276,0.996,0.4826,0.4816,false,
+PDC_RAS,sex,M,348,217,0.6236,0.983,0.5043,0.5,false,
+PDC_RAS,sex,U,,,,,,,true,small cell
+PDC_RAS,sex,X,,,,,,,true,small cell
+PDC_STATIN,age_band,18-39,55,34,0.6182,0.977,0.0995,0.0974,false,
+PDC_STATIN,age_band,40-64,277,181,0.6534,1.073,0.5009,0.5186,false,
+PDC_STATIN,age_band,65+,221,134,0.6063,0.936,0.3996,0.384,false,
+PDC_STATIN,language_group,English,385,242,0.6286,0.987,0.6962,0.6934,false,
+PDC_STATIN,language_group,Other,,,,,,,true,complementary
+PDC_STATIN,language_group,Spanish,108,68,0.6296,0.997,0.1953,0.1948,false,
+PDC_STATIN,language_group,Unknown,,,,,,,true,small cell
+PDC_STATIN,payer_type,commercial,192,124,0.6458,1.036,0.3472,0.3553,false,
+PDC_STATIN,payer_type,government,250,156,0.624,0.98,0.4521,0.447,false,
+PDC_STATIN,payer_type,marketplace,56,33,0.5893,0.927,0.1013,0.0946,false,
+PDC_STATIN,payer_type,self_pay,55,36,0.6545,1.041,0.0995,0.1032,false,
+PDC_STATIN,race_ethnicity,American Indian or Alaska Native,,,,,,,true,small cell
+PDC_STATIN,race_ethnicity,Asian,58,35,0.6034,0.951,0.1049,0.1003,false,
+PDC_STATIN,race_ethnicity,Black or African American,113,74,0.6549,1.048,0.2043,0.212,false,
+PDC_STATIN,race_ethnicity,Hispanic or Latino,160,98,0.6125,0.959,0.2893,0.2808,false,
+PDC_STATIN,race_ethnicity,Middle Eastern or North African,,,,,,,true,small cell
+PDC_STATIN,race_ethnicity,Multiracial,,,,,,,true,small cell
+PDC_STATIN,race_ethnicity,Unknown,,,,,,,true,small cell
+PDC_STATIN,race_ethnicity,White,174,116,0.6667,1.084,0.3146,0.3324,false,
+PDC_STATIN,sex,F,264,166,0.6288,0.993,0.4774,0.4756,false,
+PDC_STATIN,sex,M,282,181,0.6418,1.035,0.5099,0.5186,false,
+PDC_STATIN,sex,U,,,,,,,true,small cell
+PDC_STATIN,sex,X,,,,,,,true,small cell
+SDOH_SCREEN,age_band,18-39,1157,463,0.4002,1.0,0.3518,0.3518,false,
+SDOH_SCREEN,age_band,40-64,1393,551,0.3955,0.98,0.4235,0.4187,false,
+SDOH_SCREEN,age_band,65+,739,302,0.4087,1.028,0.2247,0.2295,false,
+SDOH_SCREEN,language_group,English,2231,929,0.4164,1.138,0.6783,0.7059,false,
+SDOH_SCREEN,language_group,Other,366,133,0.3634,0.898,0.1113,0.1011,false,
+SDOH_SCREEN,language_group,Spanish,661,239,0.3616,0.882,0.201,0.1816,false,
+SDOH_SCREEN,language_group,Unknown,31,15,0.4839,1.212,0.0094,0.0114,false,
+SDOH_SCREEN,payer_type,commercial,1092,454,0.4158,1.06,0.332,0.345,false,
+SDOH_SCREEN,payer_type,government,1569,620,0.3952,0.977,0.477,0.4711,false,
+SDOH_SCREEN,payer_type,marketplace,324,124,0.3827,0.952,0.0985,0.0942,false,
+SDOH_SCREEN,payer_type,self_pay,304,118,0.3882,0.967,0.0924,0.0897,false,
+SDOH_SCREEN,race_ethnicity,American Indian or Alaska Native,,,,,,,true,complementary
+SDOH_SCREEN,race_ethnicity,Asian,334,139,0.4162,1.045,0.1016,0.1056,false,
+SDOH_SCREEN,race_ethnicity,Black or African American,664,265,0.3991,0.997,0.2019,0.2014,false,
+SDOH_SCREEN,race_ethnicity,Hispanic or Latino,918,373,0.4063,1.022,0.2791,0.2834,false,
+SDOH_SCREEN,race_ethnicity,Middle Eastern or North African,62,19,0.3065,0.762,0.0189,0.0144,false,
+SDOH_SCREEN,race_ethnicity,Multiracial,96,40,0.4167,1.043,0.0292,0.0304,false,
+SDOH_SCREEN,race_ethnicity,Native Hawaiian or Pacific Islander,,,,,,,true,small cell
+SDOH_SCREEN,race_ethnicity,Unknown,119,56,0.4706,1.184,0.0362,0.0426,false,
+SDOH_SCREEN,race_ethnicity,White,1047,406,0.3878,0.955,0.3183,0.3085,false,
+SDOH_SCREEN,sex,F,1666,660,0.3962,0.98,0.5065,0.5015,false,
+SDOH_SCREEN,sex,M,1588,643,0.4049,1.023,0.4828,0.4886,false,
+SDOH_SCREEN,sex,U,,,,,,,true,complementary
+SDOH_SCREEN,sex,X,,,,,,,true,small cell

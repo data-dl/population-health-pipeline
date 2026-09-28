@@ -1,0 +1,32 @@
+name: pophealth_marts
+version: "1.0.0"
+config-version: 2
+profile: pophealth
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "logs"]
+
+vars:
+  measurement_year: 2025
+  as_of_date: "2026-03-03"
+  min_cell_size: 11
+
+models:
+  pophealth_marts:
+    staging:
+      +schema: dbt_staging
+      +materialized: view
+    intermediate:
+      +schema: dbt_intermediate
+      +materialized: table
+    marts:
+      +schema: marts
+      +materialized: table
+
+seeds:
+  pophealth_marts:
+    +schema: marts

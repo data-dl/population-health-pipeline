@@ -1,0 +1,11 @@
+# Drug classes tracked for adherence (proportion of days covered). Generic names only.
+classes:
+  diabetes_oral:
+    label: Diabetes medications (non-insulin)
+    drugs: [metformin, glipizide, glimepiride, sitagliptin]
+  ras_antagonist:
+    label: Renin-angiotensin system antagonists
+    drugs: [lisinopril, losartan, valsartan, enalapril]
+  statin:
+    label: Statins
+    drugs: [atorvastatin, simvastatin, rosuvastatin, pravastatin]

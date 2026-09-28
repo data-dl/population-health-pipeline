@@ -1,0 +1,29 @@
+# Tracked laboratory analytes, the LOINC codes that carry them, the units each code may arrive in,
+# and the clinically plausible range in the standard unit.
+#
+# This material contains content from LOINC (http://loinc.org). LOINC is copyright Regenstrief
+# Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is
+# available at no cost under the license at http://loinc.org/license.
+
+analytes:
+  HBA1C:
+    label: Hemoglobin A1c
+    standard_unit: "%"
+    plausible_min: 3.0
+    plausible_max: 20.0
+    codes:
+      "4548-4": {default_unit: "%"}          # NGSP percent
+      "59261-8": {default_unit: "mmol/mol"}  # IFCC protocol
+    units:
+      "%": {convert: none}
+      "mmol/mol": {convert: ifcc_to_ngsp}    # NGSP % = 0.09148 x IFCC + 2.152, rounded to 0.1
+
+  LDL:
+    label: LDL cholesterol (calculated)
+    standard_unit: "mg/dL"
+    plausible_min: 10
+    plausible_max: 400
+    codes:
+      "13457-7": {default_unit: "mg/dL"}
+    units:
+      "mg/dL": {convert: none}

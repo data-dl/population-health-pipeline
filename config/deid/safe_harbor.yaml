@@ -1,0 +1,21 @@
+policy: safe_harbor
+purpose: >-
+  A flat, patient-level analytic extract (conditions, measure eligibility and results, strata) with
+  the eighteen HIPAA Safe Harbor identifiers removed, for analysis outside the care team.
+method: >-
+  Built from the warehouse, not from the documents. Names, street address, contact details, record
+  numbers and all dates are left out; only the year of birth remains, and not at all for anyone 90
+  or older, whose age is reported as "90+". Geography is the first three ZIP digits, replaced by
+  000 for any prefix on the restricted list (populations of 20,000 or fewer). The clinic is
+  generalised to its region. Each row carries a random record identifier from a separate crosswalk,
+  so the extract cannot be joined to the demo documents. Group sizes on the quasi-identifiers are
+  reported with every extract.
+seed: 20260927
+# The demo network's smallest ZIP3 area. In production this list comes from current Census counts.
+restricted_zip3: ["704"]
+quasi_identifiers:
+  - [birth_year, sex, zip3]
+  - [age_band, sex, zip3]
+allowed_columns: [record_id, birth_year, age_at_year_end, age_band, sex, zip3, region, race_ethnicity,
+                  language_group, payer_type, has_diabetes, has_hypertension, has_hyperlipidemia,
+                  has_depression, seen_this_year]

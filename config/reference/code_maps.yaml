@@ -1,0 +1,66 @@
+# Value maps from the codes suppliers send to the codes the warehouse uses. Matching is on the
+# trimmed, upper-cased source value. A source value that is not listed is not guessed: the row is
+# held in quarantine (or defaulted, where a rule says so) until a steward adds the mapping here,
+# and the next run re-checks the rows held for it.
+
+appointment_status:
+  completed: [COMPLETED, KEPT, ARRIVED, CHK-OUT, CHECKED OUT]
+  no_show: [NO SHOW, NO-SHOW, NOSHOW, NS]
+  cancelled: [CANCELLED, CANCELED, CXL, PT CANCEL, CLINIC CANCEL]
+  scheduled: [SCHEDULED, BOOKED]
+
+visit_type:
+  office: [OFFICE, OFFICE VISIT, OV]
+  telehealth: [TELEHEALTH, VIDEO, TELE]
+  behavioral_health: [BH, BEHAVIORAL HEALTH]
+  nurse: [NURSE, RN VISIT]
+  mobile: [MOBILE, MOBILE UNIT, VAN]
+
+admin_mode:
+  in_person: [IN_PERSON, IN PERSON]
+  telehealth: [TELEHEALTH, VIDEO]
+  portal: [PORTAL]
+
+claim_status:
+  P: [P, PAID]
+  R: [R, REVERSED, REV]
+
+sex:
+  F: [F, FEMALE]
+  M: [M, MALE]
+  X: [X]
+  U: [U, UNKNOWN]
+
+payer_type:
+  commercial: [COMMERCIAL, COMM]
+  government: [GOVERNMENT, GOVT, PUBLIC]
+  marketplace: [MARKETPLACE, EXCHANGE]
+  self_pay: [SELF PAY, SELF-PAY, SELFPAY, UNINSURED]
+
+# Preferred language, to ISO 639-1. Reporting groups are English, Spanish, Other (any other
+# recognised or unrecognised language) and Unknown (blank).
+language:
+  en: [EN, ENG, ENGLISH]
+  es: [ES, SPA, SPANISH]
+  zh: [ZH, CHI, CHINESE]
+  ru: [RU, RUS, RUSSIAN]
+  bn: [BN, BEN, BENGALI]
+  ht: [HT, HAT, HAITIAN CREOLE]
+  ar: [AR, ARA, ARABIC]
+  fr: [FR, FRE, FRENCH]
+  ko: [KO, KOR, KOREAN]
+
+# Reporting category for race and ethnicity. Hispanic or Latino ethnicity takes precedence; a
+# blank race with no ethnicity is reported as Unknown, never dropped.
+race:
+  American Indian or Alaska Native: [AMERICAN INDIAN OR ALASKA NATIVE]
+  Asian: [ASIAN]
+  Black or African American: [BLACK OR AFRICAN AMERICAN]
+  Middle Eastern or North African: [MIDDLE EASTERN OR NORTH AFRICAN]
+  Native Hawaiian or Pacific Islander: [NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER]
+  White: [WHITE]
+  Multiracial: [MULTIPLE, TWO OR MORE RACES]
+
+ethnicity:
+  Hispanic or Latino: [HISPANIC OR LATINO, HISPANIC]
+  Not Hispanic or Latino: [NOT HISPANIC OR LATINO, NON-HISPANIC]

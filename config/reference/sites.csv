@@ -1,0 +1,13 @@
+site_id,site_name,region,zip3,city
+S01,Alder Clinic,North,701,Northfield
+S02,Birch Clinic,North,701,Northfield
+S03,Cedar Clinic,North,702,Riverton
+S04,Dogwood Clinic,East,702,Riverton
+S05,Elm Clinic,East,703,Easton
+S06,Fir Clinic,East,703,Easton
+S07,Ginkgo Clinic,South,703,Easton
+S08,Hazel Clinic,South,704,Southport
+S09,Ironwood Clinic,South,701,Northfield
+S10,Juniper Clinic,West,702,Riverton
+S11,Linden Clinic,West,704,Southport
+S12,Maple Clinic,West,703,Easton

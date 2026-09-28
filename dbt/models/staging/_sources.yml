@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: published
+    description: >-
+      What the ingestion pipeline publishes after each feed passes its gate. Written only by the
+      pipeline's publish step; dbt reads it and never writes to it.
+    schema: published
+    tables:
+      - name: patients
+        description: Current roster, one row per patient.
+        columns:
+          - name: patient_id
+            tests: [unique, not_null]
+      - name: patient_conditions
+        description: Problem-list codes mapped to condition groups.
+      - name: patient_attribution_history
+        description: Clinic and care-team attribution over time (type 2 history).
+      - name: screening_events
+        description: One row per screening and instrument administered, scored.
+      - name: screening_items
+        description: One row per answered screening item.
+      - name: lab_results
+        description: Tracked laboratory results in standard units.
+        columns:
+          - name: lab_result_id
+            tests: [unique, not_null]
+      - name: appointments
+        description: Appointments from both scheduling systems with their latest status.
+      - name: pharmacy_fills
+        description: Paid pharmacy fills with reversals netted out.
+      - name: pharmacy_claims
+        description: Every paid and reversed claim row as received.

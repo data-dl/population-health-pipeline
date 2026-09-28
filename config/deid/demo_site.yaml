@@ -1,0 +1,44 @@
+policy: demo_site
+purpose: >-
+  Realistic but fictional copies of the patient, clinic and worklist documents for a demo or
+  training environment, so engineers and trainers never need real records on their machines.
+  Each real patient maps to one fictional patient, consistently across runs: the same surrogate
+  identifier, name, contact details and date shift every time, so the demo stays stable and
+  relationships (patient to clinic, worklist to patient) still resolve.
+method: >-
+  Pseudonymisation with a crosswalk held only in the restricted schema. Surrogates are drawn at
+  random, never derived from the real value. Every date for a patient moves by the same number of
+  days (1-180, either direction), so intervals - "follow-up within 30 days" - survive. A generated
+  name is never a real patient's or staff member's name. Workforce names are replaced too; they are
+  not patient data, but a demo environment has no need for them.
+seed: 20260926
+
+collections:
+  patients:
+    patient_key: _id
+    transforms:
+      _id: surrogate_patient_id
+      demographics.firstName: fake_first_name
+      demographics.lastName: fake_last_name
+      demographics.birthDate: shift_date
+      demographics.registeredOn: shift_date
+      demographics.address.line1: fake_street
+      demographics.address.zip: fake_zip_same_area
+      demographics.phone: fake_phone
+      demographics.email: fake_email
+      careTeam[].name: fake_workforce_name
+      screenings.*.latest.date: shift_date
+      screenings.*.history[].date: shift_date
+      labs.*.latest.date: shift_date
+      labs.*.history[].date: shift_date
+      medications[].indexDate: shift_date
+      appointments.lastVisit: shift_date
+      careGaps[].detail: shift_dates_in_text
+  clinics:
+    transforms:
+      careManagers[]: fake_workforce_name
+  worklists:
+    transforms:
+      _id: fake_workforce_slug
+      careManager: fake_workforce_name
+      patients[].patientId: surrogate_patient_id

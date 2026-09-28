@@ -1,0 +1,8 @@
+pophealth:
+  target: warehouse
+  outputs:
+    warehouse:
+      type: duckdb
+      path: "{{ env_var('POPHEALTH_DB') }}"
+      schema: marts
+      threads: 1

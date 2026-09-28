@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: measure_patient_results
+    description: >-
+      The grain every measure number is built from: one row per patient per measure they are eligible for,
+      with whether they meet it and the value that decided it.
+    columns:
+      - name: measure_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('measure_definitions')
+                field: measure_id
+      - name: patient_id
+        tests: [not_null]
+      - name: numerator
+        tests: [not_null]
+
+  - name: measure_summary
+    description: Rates by clinic and for the network ('ALL').
+    columns:
+      - name: rate
+        tests:
+          - value_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+
+  - name: measure_equity
+    description: >-
+      Every measure by race and ethnicity, language, payer, sex and age band, with relative rates, composition
+      shares, and small-cell plus complementary suppression.
+    columns:
+      - name: suppression_reason
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["small cell", "complementary"]
+
+  - name: appointment_windows
+    description: Kept-appointment rates over 30, 90 and 180 days to the as-of date, and a frequent no-show flag.
+    columns:
+      - name: patient_id
+        tests: [unique, not_null]
+      - name: kept_rate_90
+        tests:
+          - value_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+
+  - name: appointment_period_comparison
+    description: >-
+      Generic long table of (period, comparison period) values: this week against last week, the last 90 days
+      against the 90 before, year to date against the same days last year - by network and clinic.
+
+  - name: care_gaps
+    description: Open care gaps per patient with the assigned care manager - the worklist.
+    columns:
+      - name: gap
+        tests: [not_null]
